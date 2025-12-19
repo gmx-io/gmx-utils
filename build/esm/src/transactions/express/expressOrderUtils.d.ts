@@ -1,12 +1,12 @@
-import type { ContractsChainId, SettlementChainId, SourceChainId } from "configs/chains";
-import type { SignedSubaccountApproval, Subaccount } from "domain/subaccount/types";
-import type { SignedTokenPermit, TokenData, TokensAllowanceData } from "domain/tokens/types";
-import { iRpc } from "lib/rpc/types";
-import { ISigner } from "lib/signing/signing";
-import { ExpressTxnData } from "lib/transactions/sendExpressTransaction";
-import { type BatchOrderTxnParams } from "transactions/batch/payloads/orderTransactions";
-import type { ExpressParamsEstimationMethod, ExpressTransactionEstimatorParams, ExpressTxnParams, GasPaymentValidations, GlobalExpressParams, RawRelayParamsPayload, RelayParamsPayload } from "./types";
-import { type SignatureDomain } from "./utils";
+import type { ContractsChainId, SettlementChainId, SourceChainId } from "../../configs/chains.js";
+import type { SignedSubaccountApproval, Subaccount } from "../../domain/subaccount/types.js";
+import type { SignedTokenPermit, TokenData, TokensAllowanceData } from "../../domain/tokens/types.js";
+import { iRpc } from "../../lib/rpc/types.js";
+import { ISigner } from "../../lib/signing/signing.js";
+import { ExpressTxnData } from "../../lib/transactions/sendExpressTransaction.js";
+import { type BatchOrderTxnParams } from "../batch/payloads/orderTransactions.js";
+import type { ExpressParamsEstimationMethod, ExpressTransactionEstimatorParams, ExpressTxnParams, GasPaymentValidations, GlobalExpressParams, RawRelayParamsPayload, RelayParamsPayload } from "./types.js";
+import { type SignatureDomain } from "./utils.js";
 export type BridgeOutParams = {
     token: string;
     amount: bigint;

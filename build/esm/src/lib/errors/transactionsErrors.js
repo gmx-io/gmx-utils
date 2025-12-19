@@ -1,4 +1,3 @@
-// src/lib/errors/transactionsErrors.ts
 var TxErrorType = /* @__PURE__ */ ((TxErrorType2) => {
   TxErrorType2["NotEnoughFunds"] = "NOT_ENOUGH_FUNDS";
   TxErrorType2["UserDenied"] = "USER_DENIED";
@@ -8,7 +7,7 @@ var TxErrorType = /* @__PURE__ */ ((TxErrorType2) => {
   TxErrorType2["Expired"] = "EXPIRED";
   return TxErrorType2;
 })(TxErrorType || {});
-var TX_ERROR_PATTERNS = {
+const TX_ERROR_PATTERNS = {
   ["NOT_ENOUGH_FUNDS" /* NotEnoughFunds */]: [
     { msg: "insufficient funds for gas" },
     { msg: "not enough funds for gas" },

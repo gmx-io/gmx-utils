@@ -1,4 +1,3 @@
-// src/abis/EventEmitter.ts
 var EventEmitter_default = [
   {
     inputs: [{ internalType: "contract RoleStore", name: "_roleStore", type: "address" }],

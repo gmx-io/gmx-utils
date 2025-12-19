@@ -1,4 +1,3 @@
-// src/abis/MultichainVault.ts
 var MultichainVault_default = [
   {
     inputs: [

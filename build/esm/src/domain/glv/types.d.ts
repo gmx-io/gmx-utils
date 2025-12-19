@@ -1,5 +1,5 @@
-import type { MarketInfo } from "domain/markets/types";
-import { TokenData } from "domain/tokens/types";
+import type { MarketInfo } from "../markets/types.js";
+import { TokenData } from "../tokens/types.js";
 export type GlvInfo = {
     glvToken: TokenData & {
         contractSymbol: string;

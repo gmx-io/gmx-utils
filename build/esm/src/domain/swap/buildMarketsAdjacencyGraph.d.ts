@@ -1,4 +1,4 @@
-import type { MarketConfig } from "configs/markets";
+import type { MarketConfig } from "../../configs/markets.js";
 type FromTokenAddress = string;
 type ToTokenAddress = string;
 type MarketAddress = string;

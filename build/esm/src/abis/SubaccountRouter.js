@@ -1,4 +1,3 @@
-// src/abis/SubaccountRouter.ts
 var SubaccountRouter_default = [
   {
     inputs: [

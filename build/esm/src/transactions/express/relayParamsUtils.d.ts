@@ -1,12 +1,12 @@
 import { Address } from "viem";
-import type { ContractsChainId, SourceChainId } from "configs/chains";
-import { ExternalSwapQuote } from "domain/externalSwap/types";
-import { MarketsInfoData } from "domain/markets/types";
-import { FindSwapPath } from "domain/swap/types";
-import type { SignedTokenPermit, TokenData } from "domain/tokens/types";
-import { ExternalCallsPayload } from "transactions/batch/payloads/orderTransactions";
-import type { GasPaymentParams, RawRelayParamsPayload, RelayFeePayload, RelayParamsPayload } from "./types";
-import type { SignatureDomain } from "./utils";
+import type { ContractsChainId, SourceChainId } from "../../configs/chains.js";
+import { ExternalSwapQuote } from "../../domain/externalSwap/types.js";
+import { MarketsInfoData } from "../../domain/markets/types.js";
+import { FindSwapPath } from "../../domain/swap/types.js";
+import type { SignedTokenPermit, TokenData } from "../../domain/tokens/types.js";
+import { ExternalCallsPayload } from "../batch/payloads/orderTransactions.js";
+import type { GasPaymentParams, RawRelayParamsPayload, RelayFeePayload, RelayParamsPayload } from "./types.js";
+import type { SignatureDomain } from "./utils.js";
 export declare function getExpressContractAddress(chainId: ContractsChainId, { isSubaccount, isMultichain, scope, }: {
     isSubaccount?: boolean;
     isMultichain?: boolean;

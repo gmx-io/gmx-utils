@@ -1,4 +1,3 @@
-// src/abis/GmxMigrator.ts
 var GmxMigrator_default = [
   {
     inputs: [{ internalType: "uint256", name: "_minAuthorizations", type: "uint256" }],

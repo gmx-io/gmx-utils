@@ -1,4 +1,3 @@
-// src/abis/Timelock.ts
 var Timelock_default = [
   {
     inputs: [

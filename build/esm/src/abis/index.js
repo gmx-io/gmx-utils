@@ -108,9 +108,8 @@ export { default as WETH } from './WETH.js';
 import AbstractSubaccountApprovalNonceableAbi from './AbstractSubaccountApprovalNonceable.js';
 export { default as AbstractSubaccountApprovalNonceable } from './AbstractSubaccountApprovalNonceable.js';
 
-// src/abis/index.ts
-var ERC20 = erc20Abi;
-var abis = {
+const ERC20 = erc20Abi;
+const abis = {
   ArbitrumNodeInterface: ArbitrumNodeInterfaceAbi,
   ClaimHandler: ClaimHandlerAbi,
   CustomErrors: CustomErrorsAbi,

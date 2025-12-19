@@ -1,6 +1,5 @@
-import { TypedDataEncoder } from 'ethers.js';
+import { TypedDataEncoder } from 'ethers';
 
-// src/lib/signing/signing.ts
 async function signTypedData({
   signer,
   domain,

@@ -1,11 +1,11 @@
 import { Address } from "viem";
-import type { ContractsChainId, SourceChainId } from "configs/chains";
-import { ExternalSwapQuote } from "domain/externalSwap/types";
-import type { MarketsInfoData } from "domain/markets/types";
-import type { FindSwapPath } from "domain/swap/types";
-import type { SignedTokenPermit, TokenData, TokensAllowanceData } from "domain/tokens/types";
-import type { GasPaymentParams, GasPaymentValidations, RawRelayParamsPayload, RelayFeePayload, RelayParamsPayload } from "./types";
-import { type ExternalCallsPayload } from "../batch/payloads/orderTransactions";
+import type { ContractsChainId, SourceChainId } from "../../configs/chains.js";
+import { ExternalSwapQuote } from "../../domain/externalSwap/types.js";
+import type { MarketsInfoData } from "../../domain/markets/types.js";
+import type { FindSwapPath } from "../../domain/swap/types.js";
+import type { SignedTokenPermit, TokenData, TokensAllowanceData } from "../../domain/tokens/types.js";
+import type { GasPaymentParams, GasPaymentValidations, RawRelayParamsPayload, RelayFeePayload, RelayParamsPayload } from "./types.js";
+import { type ExternalCallsPayload } from "../batch/payloads/orderTransactions.js";
 export declare function getExpressContractAddress(chainId: ContractsChainId, { isSubaccount, isMultichain, scope, }: {
     isSubaccount?: boolean;
     isMultichain?: boolean;
@@ -22,7 +22,7 @@ export declare function getOracleParams({ chainId, tokenAddresses, }: {
     chainId: ContractsChainId;
     tokenAddresses: string[];
 }): {
-    tokens: import("domain/tokens/types").ERC20Address[];
+    tokens: import("../../domain/tokens/types.js").ERC20Address[];
     providers: any[];
     data: any[];
 };
@@ -39,7 +39,7 @@ export declare function getOracleParamsForRelayParams({ chainId, gasPaymentToken
     externalCalls: ExternalCallsPayload | undefined;
     marketsInfoData: MarketsInfoData;
 }): {
-    tokens: import("domain/tokens/types").ERC20Address[];
+    tokens: import("../../domain/tokens/types.js").ERC20Address[];
     providers: any[];
     data: any[];
 };

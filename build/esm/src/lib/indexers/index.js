@@ -1,4 +1,3 @@
-// src/lib/indexers/index.ts
 function buildFiltersBody(filters, options) {
   const res = {};
   let hadOr = false;

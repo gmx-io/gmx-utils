@@ -1,4 +1,3 @@
-// src/domain/executionFee/estimateOraclePriceCount.ts
 function estimateDepositOraclePriceCount(swapsCount) {
   return 3n + BigInt(swapsCount);
 }

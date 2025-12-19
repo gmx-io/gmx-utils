@@ -2,7 +2,7 @@
  * Json files in this directory are prebuild by scripts from the `scripts/prebuild` directory.
  * No need to edit them manually, use `yarn run prebuild` command instead.
  */
-import { KinkModelMarketRateDataStoreKeys, MarketConfigDataStoreKeys, MarketValuesDataStoreKeys } from "domain/markets/types";
+import { KinkModelMarketRateDataStoreKeys, MarketConfigDataStoreKeys, MarketValuesDataStoreKeys } from "../../domain/markets/types.js";
 type HashedMarketValuesKeys = Partial<Record<MarketValuesDataStoreKeys, string>>;
 declare const HASHED_MARKET_VALUES_KEYS: {
     [chainId: number]: {

@@ -1,4 +1,3 @@
-// src/abis/CustomErrors.ts
 var CustomErrors_default = [
   { inputs: [], name: "ActionAlreadySignalled", type: "error" },
   { inputs: [], name: "ActionNotSignalled", type: "error" },

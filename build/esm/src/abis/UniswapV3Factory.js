@@ -1,4 +1,3 @@
-// src/abis/UniswapV3Factory.ts
 var UniswapV3Factory_default = [
   {
     anonymous: false,

@@ -1,4 +1,4 @@
-import { ContractsChainId } from "./chains";
+import { ContractsChainId } from "./chains.js";
 export declare const SWAP_GRAPH_MAX_MARKETS_PER_TOKEN = 5;
 export type MarketConfig = {
     marketTokenAddress: string;

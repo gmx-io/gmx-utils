@@ -1,6 +1,6 @@
-import { MarketInfo } from "domain/markets/types";
-import { OrderType } from "domain/orders/types";
-import { TokenData } from "domain/tokens/types";
+import { MarketInfo } from "../markets/types.js";
+import { OrderType } from "../orders/types.js";
+import { TokenData } from "../tokens/types.js";
 export declare enum TradeActionType {
     OrderCreated = "OrderCreated",
     OrderExecuted = "OrderExecuted",

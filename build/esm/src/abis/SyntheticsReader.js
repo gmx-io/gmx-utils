@@ -1,4 +1,3 @@
-// src/abis/SyntheticsReader.ts
 var SyntheticsReader_default = [
   {
     inputs: [

@@ -1,5 +1,5 @@
-import { Token } from "domain/tokens/types";
-import { ContractsChainId } from "./chains";
+import { Token } from "../domain/tokens/types.js";
+import { ContractsChainId } from "./chains.js";
 export declare const SUBACCOUNT_MESSAGE = "Generate a GMX 1CT (One-Click Trading) session. Only sign this message on a trusted website.";
 export declare const SUBACCOUNT_DOCS_URL = "https://docs.gmx.io/docs/trading/v2/#one-click-trading";
 export declare const DEFAULT_SUBACCOUNT_EXPIRY_DURATION: number;

@@ -1,8 +1,7 @@
 import { isAddress } from 'viem';
 
-// src/domain/uiFeeReceiver/uiFeeReceiver.ts
-var VERSION = "01";
-var PREFIX = "0xff0000";
+const VERSION = "01";
+const PREFIX = "0xff0000";
 function generateTwapId() {
   return Math.floor(Math.random() * 256 * 256).toString(16).padStart(4, "0");
 }

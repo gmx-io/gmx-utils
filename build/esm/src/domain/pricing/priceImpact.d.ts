@@ -1,6 +1,6 @@
-import { TradeFees } from "domain/fees/types";
-import { MarketInfo } from "domain/markets/types";
-import { TokenData } from "domain/tokens/types";
+import { TradeFees } from "../fees/types.js";
+import { MarketInfo } from "../markets/types.js";
+import { TokenData } from "../tokens/types.js";
 export declare function getPriceImpactByAcceptablePrice(p: {
     sizeDeltaUsd: bigint;
     acceptablePrice: bigint;

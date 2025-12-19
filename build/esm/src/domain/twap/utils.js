@@ -1,14 +1,6 @@
-import { OrderType } from './types.js';
+import { MIN_TWAP_NUMBER_OF_PARTS, MAX_TWAP_NUMBER_OF_PARTS, DEFAULT_TWAP_NUMBER_OF_PARTS } from '../../configs/twap.js';
+import { isSwapOrderType } from '../orders/utils.js';
 
-// src/configs/twap.ts
-var DEFAULT_TWAP_NUMBER_OF_PARTS = 5;
-var MIN_TWAP_NUMBER_OF_PARTS = 2;
-var MAX_TWAP_NUMBER_OF_PARTS = 30;
-function isSwapOrderType(orderType) {
-  return [OrderType.MarketSwap, OrderType.LimitSwap].includes(orderType);
-}
-
-// src/domain/twap/utils.ts
 function getIsValidTwapParams(duration, numberOfParts) {
   return duration.hours >= 0 && duration.minutes >= 0 && numberOfParts >= MIN_TWAP_NUMBER_OF_PARTS && numberOfParts <= MAX_TWAP_NUMBER_OF_PARTS;
 }

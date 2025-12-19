@@ -1,7 +1,7 @@
-import { DecreasePositionAmounts } from "domain/decrease/types";
-import { IncreasePositionAmounts } from "domain/increase/types";
-import { SwapAmounts, TokensRatio, TokensRatioAndSlippage } from "domain/swap/types";
-import { Token } from "domain/tokens/types";
+import { DecreasePositionAmounts } from "../decrease/types.js";
+import { IncreasePositionAmounts } from "../increase/types.js";
+import { SwapAmounts, TokensRatio, TokensRatioAndSlippage } from "../swap/types.js";
+import { Token } from "../tokens/types.js";
 export declare function getSwapCount({ isSwap, isIncrease, increaseAmounts, decreaseAmounts, swapAmounts, }: {
     isSwap: boolean;
     isIncrease: boolean;

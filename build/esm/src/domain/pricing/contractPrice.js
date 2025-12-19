@@ -1,22 +1,6 @@
-import 'viem';
-import '../bigmath/index.js';
-import 'lodash/isPlainObject';
+import { expandDecimals } from '../../lib/numbers/index.js';
+import { getByKey } from '../../lib/objects/index.js';
 
-// src/lib/numbers/index.ts
-var PRECISION_DECIMALS = 30;
-expandDecimals(1, PRECISION_DECIMALS);
-BigInt(
-  "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-);
-function expandDecimals(n, decimals) {
-  return BigInt(n) * 10n ** BigInt(decimals);
-}
-function getByKey(obj, key) {
-  if (!obj || !key) return void 0;
-  return obj[key];
-}
-
-// src/domain/pricing/contractPrice.ts
 function parseContractPrice(price, tokenDecimals) {
   return price * expandDecimals(1, tokenDecimals);
 }

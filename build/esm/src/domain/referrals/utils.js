@@ -1,21 +1,5 @@
-import 'viem';
-import '../bigmath/index.js';
+import { basisPointsToFloat } from '../../lib/numbers/index.js';
 
-// src/lib/numbers/index.ts
-var BASIS_POINTS_DIVISOR_BIGINT = 10000n;
-var PRECISION_DECIMALS = 30;
-var PRECISION = expandDecimals(1, PRECISION_DECIMALS);
-BigInt(
-  "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-);
-function expandDecimals(n, decimals) {
-  return BigInt(n) * 10n ** BigInt(decimals);
-}
-function basisPointsToFloat(basisPoints) {
-  return basisPoints * PRECISION / BASIS_POINTS_DIVISOR_BIGINT;
-}
-
-// src/domain/referrals/utils.ts
 function getUserReferralInfo(p) {
   const {
     userReferralCode,

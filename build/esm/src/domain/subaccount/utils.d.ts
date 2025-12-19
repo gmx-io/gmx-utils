@@ -1,6 +1,6 @@
 import { type PublicClient } from "viem";
-import type { AnyChainId, ContractsChainId } from "configs/chains";
-import type { SignedSubaccountApproval, Subaccount, SubaccountApproval, SubaccountOnchainData, SubaccountValidations } from "./types";
+import type { AnyChainId, ContractsChainId } from "../../configs/chains.js";
+import type { SignedSubaccountApproval, Subaccount, SubaccountApproval, SubaccountOnchainData, SubaccountValidations } from "./types.js";
 export declare function getSubaccountValidations({ requiredActions, subaccount, subaccountRouterAddress, }: {
     requiredActions: number;
     subaccount: Subaccount;

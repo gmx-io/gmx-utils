@@ -1,4 +1,3 @@
-// src/abis/ReaderV2.ts
 var ReaderV2_default = [
   {
     inputs: [],

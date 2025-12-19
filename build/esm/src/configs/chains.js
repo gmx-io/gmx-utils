@@ -3,25 +3,24 @@ import { bsc, base, sepolia, optimismSepolia, arbitrumSepolia, avalanche, arbitr
 import { BOTANIX, ARBITRUM, AVALANCHE, AVALANCHE_FUJI, ARBITRUM_SEPOLIA, SOURCE_OPTIMISM_SEPOLIA, SOURCE_SEPOLIA, SOURCE_BASE_MAINNET, SOURCE_BSC_MAINNET } from './chainIds.js';
 export { ARBITRUM, ARBITRUM_SEPOLIA, AVALANCHE, AVALANCHE_FUJI, BOTANIX, ETH_MAINNET, SOURCE_BASE_MAINNET, SOURCE_BSC_MAINNET, SOURCE_OPTIMISM_SEPOLIA, SOURCE_SEPOLIA } from './chainIds.js';
 
-// src/configs/chains.ts
-var CONTRACTS_CHAIN_IDS = [ARBITRUM, AVALANCHE, BOTANIX];
-var CONTRACTS_CHAIN_IDS_DEV = [
+const CONTRACTS_CHAIN_IDS = [ARBITRUM, AVALANCHE, BOTANIX];
+const CONTRACTS_CHAIN_IDS_DEV = [
   ...CONTRACTS_CHAIN_IDS,
   AVALANCHE_FUJI,
   ARBITRUM_SEPOLIA
 ];
-var SETTLEMENT_CHAIN_IDS = [ARBITRUM, AVALANCHE];
-var SETTLEMENT_CHAIN_IDS_DEV = [
+const SETTLEMENT_CHAIN_IDS = [ARBITRUM, AVALANCHE];
+const SETTLEMENT_CHAIN_IDS_DEV = [
   ...SETTLEMENT_CHAIN_IDS,
   ARBITRUM_SEPOLIA
 ];
-var SOURCE_CHAIN_IDS = [
+const SOURCE_CHAIN_IDS = [
   SOURCE_OPTIMISM_SEPOLIA,
   SOURCE_SEPOLIA,
   SOURCE_BASE_MAINNET,
   SOURCE_BSC_MAINNET
 ];
-var CONTRACTS_CHAIN_CONFIGS = {
+const CONTRACTS_CHAIN_CONFIGS = {
   [ARBITRUM]: {
     chainId: ARBITRUM,
     name: "Arbitrum",
@@ -139,7 +138,7 @@ var CONTRACTS_CHAIN_CONFIGS = {
   }
   // Use this notation to correctly infer chain names, etc. from config
 };
-var SOURCE_CHAIN_CONFIGS = {
+const SOURCE_CHAIN_CONFIGS = {
   [SOURCE_OPTIMISM_SEPOLIA]: {
     chainId: SOURCE_OPTIMISM_SEPOLIA,
     name: "Optimism Sepolia",
@@ -166,11 +165,11 @@ var SOURCE_CHAIN_CONFIGS = {
   }
   // Use this notation to correctly infer chain names, etc. from config
 };
-var ALL_CHAIN_CONFIGS = {
+const ALL_CHAIN_CONFIGS = {
   ...CONTRACTS_CHAIN_CONFIGS,
   ...SOURCE_CHAIN_CONFIGS
 };
-var botanix = defineChain({
+const botanix = defineChain({
   id: BOTANIX,
   name: "Botanix",
   nativeCurrency: {
@@ -199,7 +198,7 @@ var botanix = defineChain({
     }
   }
 });
-var VIEM_CHAIN_BY_CHAIN_ID = {
+const VIEM_CHAIN_BY_CHAIN_ID = {
   [AVALANCHE_FUJI]: avalancheFuji,
   [ARBITRUM]: arbitrum,
   [AVALANCHE]: avalanche,
@@ -222,7 +221,7 @@ function getChainIdBySlug(slug) {
   )?.chainId;
   return chainId;
 }
-var getViemChain = (chainId) => {
+const getViemChain = (chainId) => {
   return VIEM_CHAIN_BY_CHAIN_ID[chainId];
 };
 function getHighExecutionFee(chainId) {

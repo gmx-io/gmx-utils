@@ -1,4 +1,3 @@
-// src/domain/decrease/types.ts
 var DecreasePositionSwapType = /* @__PURE__ */ ((DecreasePositionSwapType2) => {
   DecreasePositionSwapType2[DecreasePositionSwapType2["NoSwap"] = 0] = "NoSwap";
   DecreasePositionSwapType2[DecreasePositionSwapType2["SwapPnlTokenToCollateralToken"] = 1] = "SwapPnlTokenToCollateralToken";

@@ -1,4 +1,3 @@
-// src/abis/RewardRouter.ts
 var RewardRouter_default = [
   {
     anonymous: false,

@@ -1,4 +1,3 @@
-// src/domain/tradeFlags/types.ts
 var TradeType = /* @__PURE__ */ ((TradeType2) => {
   TradeType2["Long"] = "Long";
   TradeType2["Short"] = "Short";

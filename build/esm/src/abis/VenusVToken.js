@@ -1,4 +1,3 @@
-// src/abis/VenusVToken.ts
 var VenusVToken_default = [
   {
     inputs: [],

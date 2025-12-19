@@ -1,6 +1,6 @@
-import { OrderType } from "domain/orders/types";
-import { TriggerThresholdType } from "domain/pricing/types";
-import { SwapStrategyForIncreaseOrders } from "domain/swap/types";
+import { OrderType } from "../orders/types.js";
+import { TriggerThresholdType } from "../pricing/types.js";
+import { SwapStrategyForIncreaseOrders } from "../swap/types.js";
 export type IncreasePositionAmounts = {
     initialCollateralAmount: bigint;
     initialCollateralUsd: bigint;

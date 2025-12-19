@@ -1,4 +1,3 @@
-// src/domain/tradeHistory/types.ts
 var TradeActionType = /* @__PURE__ */ ((TradeActionType2) => {
   TradeActionType2["OrderCreated"] = "OrderCreated";
   TradeActionType2["OrderExecuted"] = "OrderExecuted";

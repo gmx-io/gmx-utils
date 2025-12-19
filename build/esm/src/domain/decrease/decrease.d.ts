@@ -1,9 +1,9 @@
-import { DecreasePositionAmounts } from "domain/decrease/types";
-import { MarketInfo } from "domain/markets/types";
-import { NextPositionValues } from "domain/positions/types";
-import { PositionInfo, PositionInfoLoaded } from "domain/positions/types";
-import { UserReferralInfo } from "domain/referrals/types";
-import { TokenData } from "domain/tokens/types";
+import { DecreasePositionAmounts } from "../decrease/types.js";
+import { MarketInfo } from "../markets/types.js";
+import { NextPositionValues } from "../positions/types.js";
+import { PositionInfo, PositionInfoLoaded } from "../positions/types.js";
+import { UserReferralInfo } from "../referrals/types.js";
+import { TokenData } from "../tokens/types.js";
 export declare function getDecreasePositionAmounts(p: {
     marketInfo: MarketInfo;
     collateralToken: TokenData;

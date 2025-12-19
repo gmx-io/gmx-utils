@@ -1,5 +1,4 @@
-// src/lib/bigmath/index.ts
-var bigMath = {
+const bigMath = {
   abs(x) {
     return x < 0n ? -x : x;
   },

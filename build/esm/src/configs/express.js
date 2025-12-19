@@ -1,66 +1,38 @@
-import 'viem';
-import '../bigmath/index.js';
+import { expandDecimals, USD_DECIMALS } from '../lib/numbers/index.js';
+import { periodToSeconds } from '../lib/time.js';
 import { BOTANIX, ARBITRUM_SEPOLIA, AVALANCHE_FUJI, AVALANCHE, ARBITRUM } from './chains.js';
 import { getTokenBySymbol, getWrappedToken } from './tokens.js';
 
-// src/lib/numbers/index.ts
-var USD_DECIMALS = 30;
-var PRECISION_DECIMALS = 30;
-expandDecimals(1, PRECISION_DECIMALS);
-BigInt(
-  "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-);
-function expandDecimals(n, decimals) {
-  return BigInt(n) * 10n ** BigInt(decimals);
-}
-
-// src/lib/time.ts
-var SECONDS_IN_PERIOD = {
-  "1m": 60,
-  "5m": 60 * 5,
-  "15m": 60 * 15,
-  "1h": 60 * 60,
-  "4h": 60 * 60 * 4,
-  "1d": 60 * 60 * 24,
-  "1y": 60 * 60 * 24 * 365
-};
-function secondsFrom(period) {
-  return SECONDS_IN_PERIOD[period];
-}
-function periodToSeconds(periodsCount, period) {
-  return periodsCount * secondsFrom(period);
-}
--(/* @__PURE__ */ new Date()).getTimezoneOffset() * 60;
-var SUBACCOUNT_MESSAGE = "Generate a GMX 1CT (One-Click Trading) session. Only sign this message on a trusted website.";
-var SUBACCOUNT_DOCS_URL = "https://docs.gmx.io/docs/trading/v2/#one-click-trading";
-var DEFAULT_SUBACCOUNT_EXPIRY_DURATION = periodToSeconds(7, "1d");
-var DEFAULT_SUBACCOUNT_MAX_ALLOWED_COUNT = 90;
-var DEFAULT_PERMIT_DEADLINE_DURATION = periodToSeconds(1, "1h");
-var DEFAULT_EXPRESS_ORDER_DEADLINE_DURATION = periodToSeconds(1, "1h");
-var GELATO_API_KEYS = {
+const SUBACCOUNT_MESSAGE = "Generate a GMX 1CT (One-Click Trading) session. Only sign this message on a trusted website.";
+const SUBACCOUNT_DOCS_URL = "https://docs.gmx.io/docs/trading/v2/#one-click-trading";
+const DEFAULT_SUBACCOUNT_EXPIRY_DURATION = periodToSeconds(7, "1d");
+const DEFAULT_SUBACCOUNT_MAX_ALLOWED_COUNT = 90;
+const DEFAULT_PERMIT_DEADLINE_DURATION = periodToSeconds(1, "1h");
+const DEFAULT_EXPRESS_ORDER_DEADLINE_DURATION = periodToSeconds(1, "1h");
+const GELATO_API_KEYS = {
   [ARBITRUM]: "6dE6kOa9pc1ap4dQQC2iaK9i6nBFp8eYxQlm00VreWc_",
   [AVALANCHE]: "FalsQh9loL6V0rwPy4gWgnQPR6uTHfWjSVT2qlTzUq4_",
   [BOTANIX]: "s5GgkfX7dvd_2uYqsRSCjzMekUrXh0dibUvfLab1Anc_",
   [ARBITRUM_SEPOLIA]: "nx5nyAg4h2kI_64YtOuPt7LSPDEXo4u8eJY_idF9xDw_"
 };
-var MIN_GELATO_USD_BALANCE_FOR_SPONSORED_CALL = expandDecimals(
+const MIN_GELATO_USD_BALANCE_FOR_SPONSORED_CALL = expandDecimals(
   100,
   USD_DECIMALS
 );
-var MIN_RELAYER_FEE_USD = 5n ** BigInt(USD_DECIMALS - 1);
-var EXPRESS_EXTRA_EXECUTION_FEE_BUFFER_BPS = 1e3;
-var EXPRESS_DEFAULT_MIN_RESIDUAL_USD_NUMBER = 20;
-var EXPRESS_DEFAULT_MIN_RESIDUAL_USD = expandDecimals(
+const MIN_RELAYER_FEE_USD = 5n ** BigInt(USD_DECIMALS - 1);
+const EXPRESS_EXTRA_EXECUTION_FEE_BUFFER_BPS = 1e3;
+const EXPRESS_DEFAULT_MIN_RESIDUAL_USD_NUMBER = 20;
+const EXPRESS_DEFAULT_MIN_RESIDUAL_USD = expandDecimals(
   EXPRESS_DEFAULT_MIN_RESIDUAL_USD_NUMBER,
   USD_DECIMALS
 );
-var EXPRESS_DEFAULT_MAX_RESIDUAL_USD_NUMBER = 40;
-var EXPRESS_DEFAULT_MAX_RESIDUAL_USD = expandDecimals(
+const EXPRESS_DEFAULT_MAX_RESIDUAL_USD_NUMBER = 40;
+const EXPRESS_DEFAULT_MAX_RESIDUAL_USD = expandDecimals(
   EXPRESS_DEFAULT_MAX_RESIDUAL_USD_NUMBER,
   USD_DECIMALS
 );
-var EXPRESS_RESIDUAL_AMOUNT_MULTIPLIER = 20n;
-var GAS_PAYMENT_TOKENS = {
+const EXPRESS_RESIDUAL_AMOUNT_MULTIPLIER = 20n;
+const GAS_PAYMENT_TOKENS = {
   [ARBITRUM]: [
     getTokenBySymbol(ARBITRUM, "USDC").address,
     getTokenBySymbol(ARBITRUM, "WETH").address,

@@ -1,4 +1,3 @@
-// src/abis/MultichainTransferRouter.ts
 var MultichainTransferRouter_default = [
   {
     inputs: [

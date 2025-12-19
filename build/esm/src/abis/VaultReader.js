@@ -1,4 +1,3 @@
-// src/abis/VaultReader.ts
 var VaultReader_default = [
   {
     inputs: [

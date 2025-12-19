@@ -1,4 +1,3 @@
-// src/abis/MultichainGlvRouter.ts
 var MultichainGlvRouter_default = [
   {
     inputs: [

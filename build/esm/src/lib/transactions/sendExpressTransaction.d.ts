@@ -1,5 +1,5 @@
-import { ContractsChainId } from "configs/chains";
-import { type GelatoTaskStatus, type TransactionWaiterResult } from "./types";
+import { ContractsChainId } from "../../configs/chains.js";
+import { type GelatoTaskStatus, type TransactionWaiterResult } from "./types.js";
 export type ExpressTxnData = {
     callData: string;
     to: string;

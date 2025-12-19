@@ -1,8 +1,6 @@
 import { defineConfig } from "tsup";
-import { TsconfigPathsPlugin } from '@esbuild-plugins/tsconfig-paths'
 
 import { esbuildPluginFilePathExtensions } from "esbuild-plugin-file-path-extensions";
-import path from "path";
 
 export default defineConfig({
   entry: ["src/**/*.ts", "!src/**/*.spec.ts", "!src/**/*.test.ts", "scripts/**/*.ts"],
@@ -12,15 +10,12 @@ export default defineConfig({
   // We generate declarations via `tsc --emitDeclarationOnly` instead (see package.json).
   dts: false,
   outDir: "build/esm",
-  bundle: true,
+  bundle: false,
   splitting: false,
   sourcemap: true,
   clean: true,
   treeshake: true,
   esbuildPlugins: [
-    TsconfigPathsPlugin({
-      tsconfig: path.resolve(__dirname, "tsconfig.json"),
-    }),
     esbuildPluginFilePathExtensions({
       esmExtension: "js",
     }),

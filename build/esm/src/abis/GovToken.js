@@ -1,4 +1,3 @@
-// src/abis/GovToken.ts
 var GovToken_default = [
   {
     inputs: [

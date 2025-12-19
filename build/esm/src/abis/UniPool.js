@@ -1,4 +1,3 @@
-// src/abis/UniPool.ts
 var UniPool_default = [
   {
     inputs: [{ internalType: "uint32[]", name: "", type: "uint32[]" }],

@@ -1,4 +1,6 @@
-// src/domain/pricing/utils.ts
+import { OrderType } from '../orders/types.js';
+import { TriggerThresholdType } from '../pricing/types.js';
+
 function getMarkPrice(p) {
   const { prices, isIncrease, isLong } = p;
   const shouldUseMaxPrice = getShouldUseMaxPrice(isIncrease, isLong);
@@ -8,17 +10,17 @@ function getShouldUseMaxPrice(isIncrease, isLong) {
   return isIncrease ? isLong : !isLong;
 }
 function getOrderThresholdType(orderType, isLong) {
-  if (orderType === 3 /* LimitIncrease */) {
-    return isLong ? "<" /* Below */ : ">" /* Above */;
+  if (orderType === OrderType.LimitIncrease) {
+    return isLong ? TriggerThresholdType.Below : TriggerThresholdType.Above;
   }
-  if (orderType === 8 /* StopIncrease */) {
-    return isLong ? ">" /* Above */ : "<" /* Below */;
+  if (orderType === OrderType.StopIncrease) {
+    return isLong ? TriggerThresholdType.Above : TriggerThresholdType.Below;
   }
-  if (orderType === 5 /* LimitDecrease */) {
-    return isLong ? ">" /* Above */ : "<" /* Below */;
+  if (orderType === OrderType.LimitDecrease) {
+    return isLong ? TriggerThresholdType.Above : TriggerThresholdType.Below;
   }
-  if (orderType === 6 /* StopLossDecrease */) {
-    return isLong ? "<" /* Below */ : ">" /* Above */;
+  if (orderType === OrderType.StopLossDecrease) {
+    return isLong ? TriggerThresholdType.Below : TriggerThresholdType.Above;
   }
   return void 0;
 }

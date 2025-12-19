@@ -1,4 +1,3 @@
-// src/abis/ClaimHandler.ts
 var ClaimHandler_default = [
   {
     inputs: [

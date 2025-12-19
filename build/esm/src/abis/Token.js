@@ -1,4 +1,3 @@
-// src/abis/Token.ts
 var Token_default = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {

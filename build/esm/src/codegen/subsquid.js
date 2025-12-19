@@ -1,4 +1,3 @@
-// src/codegen/subsquid.ts
 var AccountStatOrderByInput = /* @__PURE__ */ ((AccountStatOrderByInput2) => {
   AccountStatOrderByInput2["closedCount_ASC"] = "closedCount_ASC";
   AccountStatOrderByInput2["closedCount_ASC_NULLS_FIRST"] = "closedCount_ASC_NULLS_FIRST";

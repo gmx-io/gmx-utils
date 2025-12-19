@@ -1,4 +1,3 @@
-// src/abis/StBTC.ts
 var StBTC_default = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {

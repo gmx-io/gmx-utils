@@ -1,8 +1,8 @@
-import { GlvInfo } from "domain/glv/types";
-import { DepositAmounts } from "domain/gm/types";
-import { MarketInfo } from "domain/markets/types";
-import { TokenData } from "domain/tokens/types";
-import { WithdrawalAmounts } from "./types";
+import { GlvInfo } from "../glv/types.js";
+import { DepositAmounts } from "../gm/types.js";
+import { MarketInfo } from "../markets/types.js";
+import { TokenData } from "../tokens/types.js";
+import { WithdrawalAmounts } from "./types.js";
 export declare function getDepositAmounts(p: {
     marketInfo: MarketInfo;
     marketToken: TokenData;

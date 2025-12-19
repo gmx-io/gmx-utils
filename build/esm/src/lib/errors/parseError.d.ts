@@ -1,4 +1,4 @@
-import { CustomErrorName, TxErrorType } from "./transactionsErrors";
+import { CustomErrorName, TxErrorType } from "./transactionsErrors.js";
 export type OrderErrorContext = "simulation" | "gasLimit" | "gasPrice" | "bestNonce" | "sending" | "pending" | "relayer" | "minting" | "execution" | "unknown";
 export type ErrorLike = {
     message?: string;

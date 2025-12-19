@@ -1,4 +1,3 @@
-// src/abis/GlpManager.ts
 var GlpManager_default = [
   {
     inputs: [

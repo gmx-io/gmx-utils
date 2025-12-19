@@ -1,21 +1,7 @@
 import { getAddress } from 'viem';
-import '../bigmath/index.js';
+import { PRECISION, expandDecimals } from '../../../lib/numbers/index.js';
+import { nowInSeconds } from '../../../lib/time.js';
 
-// src/domain/fees/rebates/utils.ts
-var PRECISION_DECIMALS = 30;
-var PRECISION = expandDecimals(1, PRECISION_DECIMALS);
-BigInt(
-  "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-);
-function expandDecimals(n, decimals) {
-  return BigInt(n) * 10n ** BigInt(decimals);
-}
-function nowInSeconds() {
-  return Math.floor(Date.now() / 1e3);
-}
--(/* @__PURE__ */ new Date()).getTimezoneOffset() * 60;
-
-// src/domain/fees/rebates/utils.ts
 function calculateRebateInfo(rawRebatesData, positionsConstants) {
   if (!positionsConstants) {
     return {
