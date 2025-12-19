@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+.vscode/
+.cursor/
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+*.log
+.env
+.env.local
+.eslintcache
+coverage/

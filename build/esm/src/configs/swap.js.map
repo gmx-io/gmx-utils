@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/configs/swap.ts"],"names":[],"mappings":";AAAO,IAAM,oBAAA,GAAuB;AAC7B,IAAM,6BAAA,GAAgC","file":"swap.js","sourcesContent":["export const MAX_EDGE_PATH_LENGTH = 3;\nexport const DEFAULT_NAIVE_TOP_PATHS_COUNT = 3;\n"]}

@@ -1,0 +1,49 @@
+// src/lib/bigmath/index.ts
+var bigMath = {
+  abs(x) {
+    return x < 0n ? -x : x;
+  },
+  mulDiv(x, y, z, roundUpMagnitude = false) {
+    const result = x * y / z;
+    if (roundUpMagnitude && this.mulmod(x, y, z) > 0n) {
+      return result + 1n;
+    }
+    return result;
+  },
+  max(max, ...rest) {
+    return rest.reduce((currentMax, val) => currentMax < val ? val : currentMax, max);
+  },
+  min(min, ...rest) {
+    return rest.reduce((currentMin, val) => currentMin > val ? val : currentMin, min);
+  },
+  avg(...values) {
+    let sum = 0n;
+    let count = 0n;
+    for (const value of values) {
+      if (value !== void 0) {
+        sum += value;
+        count += 1n;
+      }
+    }
+    if (count === 0n) {
+      return void 0;
+    }
+    return sum / count;
+  },
+  divRound(x, y) {
+    return x / y + (x % y * 2n > y ? 1n : 0n);
+  },
+  divRoundUp(x, y) {
+    return (x + y - 1n) / y;
+  },
+  mulmod(x, y, m) {
+    return x * y % m;
+  },
+  clamp(value, min, max) {
+    return bigMath.max(min, bigMath.min(value, max));
+  }
+};
+
+export { bigMath };
+//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.js.map

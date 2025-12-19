@@ -1,0 +1,38 @@
+import { OrderType } from "domain/orders/types";
+import { TriggerThresholdType } from "domain/pricing/types";
+import { SwapStrategyForIncreaseOrders } from "domain/swap/types";
+
+export type IncreasePositionAmounts = {
+  initialCollateralAmount: bigint;
+  initialCollateralUsd: bigint;
+
+  collateralDeltaAmount: bigint;
+  collateralDeltaUsd: bigint;
+
+  swapStrategy: SwapStrategyForIncreaseOrders;
+  indexTokenAmount: bigint;
+
+  sizeDeltaUsd: bigint;
+  sizeDeltaInTokens: bigint;
+
+  estimatedLeverage?: bigint;
+
+  indexPrice: bigint;
+  initialCollateralPrice: bigint;
+  collateralPrice: bigint;
+  triggerPrice?: bigint;
+  limitOrderType?: OrderType.LimitIncrease | OrderType.StopIncrease;
+  triggerThresholdType?: TriggerThresholdType;
+  acceptablePrice: bigint;
+  acceptablePriceDeltaBps: bigint;
+  recommendedAcceptablePriceDeltaBps: bigint;
+
+  positionFeeUsd: bigint;
+  uiFeeUsd: bigint;
+  swapUiFeeUsd: bigint;
+  feeDiscountUsd: bigint;
+  borrowingFeeUsd: bigint;
+  fundingFeeUsd: bigint;
+  positionPriceImpactDeltaUsd: bigint;
+  potentialPriceImpactDiffUsd: bigint;
+};

@@ -1,0 +1,170 @@
+import { Chain } from "viem/chains";
+import { ARBITRUM, ARBITRUM_SEPOLIA, AVALANCHE, AVALANCHE_FUJI, BOTANIX, ETH_MAINNET, SOURCE_BASE_MAINNET, SOURCE_BSC_MAINNET, SOURCE_OPTIMISM_SEPOLIA, SOURCE_SEPOLIA } from "./chainIds";
+export { ARBITRUM, ARBITRUM_SEPOLIA, AVALANCHE, AVALANCHE_FUJI, BOTANIX, ETH_MAINNET, SOURCE_BASE_MAINNET, SOURCE_BSC_MAINNET, SOURCE_OPTIMISM_SEPOLIA, SOURCE_SEPOLIA, };
+export declare const CONTRACTS_CHAIN_IDS: readonly [42161, 43114, 3637];
+export declare const CONTRACTS_CHAIN_IDS_DEV: readonly [42161, 43114, 3637, 43113, 421614];
+export declare const SETTLEMENT_CHAIN_IDS: readonly [42161, 43114];
+export declare const SETTLEMENT_CHAIN_IDS_DEV: readonly [42161, 43114, 421614];
+export declare const SOURCE_CHAIN_IDS: readonly [11155420, 11155111, 8453, 56];
+export type ContractsChainId = (typeof CONTRACTS_CHAIN_IDS_DEV)[number];
+export type ContractsChainIdProduction = (typeof CONTRACTS_CHAIN_IDS)[number];
+export type SettlementChainId = (typeof SETTLEMENT_CHAIN_IDS_DEV)[number];
+export type SourceChainId = (typeof SOURCE_CHAIN_IDS)[number];
+export type AnyChainId = ContractsChainId | SettlementChainId | SourceChainId;
+declare const CONTRACTS_CHAIN_CONFIGS: {
+    readonly 42161: {
+        readonly chainId: 42161;
+        readonly name: "Arbitrum";
+        readonly slug: "arbitrum";
+        readonly explorerUrl: "https://arbiscan.io/";
+        readonly nativeTokenSymbol: "ETH";
+        readonly wrappedTokenSymbol: "WETH";
+        readonly defaultCollateralSymbol: "USDC.e";
+        readonly highExecutionFee: 5;
+        readonly shouldUseMaxPriorityFeePerGas: false;
+        readonly defaultExecutionFeeBufferBps: 3000;
+        readonly maxFeePerGas: undefined;
+        readonly gasPricePremium: 0n;
+        readonly maxPriorityFeePerGas: 1500000000n;
+        readonly excessiveExecutionFee: 10;
+        readonly minExecutionFee: undefined;
+        readonly gasPriceBuffer: 2000n;
+        readonly isDisabled: false;
+    };
+    readonly 43114: {
+        readonly chainId: 43114;
+        readonly name: "Avalanche";
+        readonly slug: "avalanche";
+        readonly explorerUrl: "https://snowtrace.io/";
+        readonly nativeTokenSymbol: "AVAX";
+        readonly wrappedTokenSymbol: "WAVAX";
+        readonly defaultCollateralSymbol: "USDC";
+        readonly highExecutionFee: 5;
+        readonly shouldUseMaxPriorityFeePerGas: true;
+        readonly defaultExecutionFeeBufferBps: 1000;
+        readonly maxFeePerGas: 200000000000n;
+        readonly gasPricePremium: 6000000000n;
+        readonly maxPriorityFeePerGas: 1500000000n;
+        readonly excessiveExecutionFee: 10;
+        readonly minExecutionFee: undefined;
+        readonly gasPriceBuffer: undefined;
+        readonly isDisabled: false;
+    };
+    readonly 43113: {
+        readonly chainId: 43113;
+        readonly name: "Avalanche Fuji";
+        readonly slug: "fuji";
+        readonly explorerUrl: "https://testnet.snowtrace.io/";
+        readonly nativeTokenSymbol: "AVAX";
+        readonly wrappedTokenSymbol: "WAVAX";
+        readonly defaultCollateralSymbol: "USDC";
+        readonly highExecutionFee: 5;
+        readonly shouldUseMaxPriorityFeePerGas: true;
+        readonly defaultExecutionFeeBufferBps: 1000;
+        readonly maxFeePerGas: undefined;
+        readonly gasPricePremium: undefined;
+        readonly maxPriorityFeePerGas: 1500000000n;
+        readonly excessiveExecutionFee: 10;
+        readonly minExecutionFee: undefined;
+        readonly gasPriceBuffer: undefined;
+        readonly isDisabled: false;
+    };
+    readonly 421614: {
+        readonly chainId: 421614;
+        readonly name: "Arbitrum Sepolia";
+        readonly slug: "arbitrum-sepolia";
+        readonly explorerUrl: "https://sepolia.arbiscan.io/";
+        readonly nativeTokenSymbol: "ETH";
+        readonly wrappedTokenSymbol: "WETH";
+        readonly defaultCollateralSymbol: "USDC";
+        readonly highExecutionFee: 5;
+        readonly shouldUseMaxPriorityFeePerGas: false;
+        readonly defaultExecutionFeeBufferBps: 1000;
+        readonly maxFeePerGas: undefined;
+        readonly gasPricePremium: undefined;
+        readonly maxPriorityFeePerGas: 1500000000n;
+        readonly excessiveExecutionFee: 10;
+        readonly minExecutionFee: undefined;
+        readonly gasPriceBuffer: undefined;
+        readonly isDisabled: false;
+    };
+    readonly 3637: {
+        readonly chainId: 3637;
+        readonly name: "Botanix";
+        readonly slug: "botanix";
+        readonly explorerUrl: "https://botanixscan.io/";
+        readonly nativeTokenSymbol: "BTC";
+        readonly wrappedTokenSymbol: "PBTC";
+        readonly defaultCollateralSymbol: "USDC.E";
+        readonly highExecutionFee: 5;
+        readonly shouldUseMaxPriorityFeePerGas: true;
+        readonly defaultExecutionFeeBufferBps: 3000;
+        readonly maxFeePerGas: 20n;
+        readonly gasPricePremium: undefined;
+        readonly maxPriorityFeePerGas: 7n;
+        readonly excessiveExecutionFee: 10;
+        /**
+         * avoid botanix gas spikes when chain is not actively used
+         * if set, execution fee value should not be less than this in USD equivalent
+         */
+        readonly minExecutionFee: 1000000000000000000000000000n;
+        readonly gasPriceBuffer: undefined;
+        readonly isDisabled: false;
+    };
+};
+declare const SOURCE_CHAIN_CONFIGS: {
+    readonly 11155420: {
+        readonly chainId: 11155420;
+        readonly name: "Optimism Sepolia";
+        readonly slug: "optimism-sepolia";
+        readonly explorerUrl: "https://sepolia-optimism.etherscan.io/";
+    };
+    readonly 11155111: {
+        readonly chainId: 11155111;
+        readonly name: "Sepolia";
+        readonly slug: "sepolia";
+        readonly explorerUrl: "https://sepolia.etherscan.io/";
+    };
+    readonly 8453: {
+        readonly chainId: 8453;
+        readonly name: "Base";
+        readonly slug: "base-mainnet";
+        readonly explorerUrl: "https://basescan.org/";
+    };
+    readonly 56: {
+        readonly chainId: 56;
+        readonly name: "BNB";
+        readonly slug: "bnb-mainnet";
+        readonly explorerUrl: "https://bscscan.com/";
+    };
+};
+export type ContractsChainName = (typeof CONTRACTS_CHAIN_CONFIGS)[keyof typeof CONTRACTS_CHAIN_CONFIGS]["name"];
+export type SourceChainName = (typeof SOURCE_CHAIN_CONFIGS)[keyof typeof SOURCE_CHAIN_CONFIGS]["name"];
+export type ChainName = ContractsChainName | SourceChainName | "Unknown";
+export type ContractsChainSlug = (typeof CONTRACTS_CHAIN_CONFIGS)[keyof typeof CONTRACTS_CHAIN_CONFIGS]["slug"];
+export type SourceChainSlug = (typeof SOURCE_CHAIN_CONFIGS)[keyof typeof SOURCE_CHAIN_CONFIGS]["slug"];
+export type ChainSlug = ContractsChainSlug | SourceChainSlug | "unknown";
+export declare const botanix: Chain;
+export declare function getChainName(chainId: number): ChainName;
+export declare function getChainSlug(chainId: number): ChainSlug;
+export declare function getChainIdBySlug(slug: string): AnyChainId | undefined;
+export declare const getViemChain: (chainId: number) => Chain;
+export declare function getHighExecutionFee(chainId: number): any;
+export declare function getExcessiveExecutionFee(chainId: number): any;
+export declare function isContractsChain(chainId: number, dev?: boolean): chainId is ContractsChainId;
+export declare function isTestnetChain(chainId: number): boolean;
+export declare function getMaxFeePerGas(chainId: ContractsChainId): bigint | undefined;
+export declare function getGasPricePremium(chainId: ContractsChainId): bigint | undefined;
+export declare function getMaxPriorityFeePerGas(chainId: ContractsChainId): 1500000000n | 7n;
+export declare function getMinExecutionFeeUsd(chainId: ContractsChainId): 1000000000000000000000000000n | undefined;
+export declare function getGasPriceBuffer(chainId: ContractsChainId): 2000n | undefined;
+export declare function isChainDisabled(chainId: ContractsChainId): false;
+export declare function getChainNativeTokenSymbol(chainId: ContractsChainId): "ETH" | "AVAX" | "BTC";
+export declare function getChainWrappedTokenSymbol(chainId: ContractsChainId): "WETH" | "WAVAX" | "PBTC";
+export declare function getChainDefaultCollateralSymbol(chainId: ContractsChainId): "USDC.e" | "USDC" | "USDC.E";
+export declare function getExplorerUrl(chainId: number | "layerzero" | "layerzero-testnet"): string;
+export declare function getTokenExplorerUrl(chainId: number, tokenAddress: string): string;
+export declare function getExecutionFeeConfig(chainId: ContractsChainId): {
+    shouldUseMaxPriorityFeePerGas: boolean;
+    defaultBufferBps: number | undefined;
+} | undefined;

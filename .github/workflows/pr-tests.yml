@@ -1,0 +1,52 @@
+name: Pull Request Tests
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js with Corepack
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          corepack: true
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        shell: bash
+        run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
+
+      - name: Cache Yarn dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ steps.yarn-cache-dir-path.outputs.dir }}
+            .yarn/cache
+            .yarn/unplugged
+            .yarn/install-state.gz
+          key: yarn-deps-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            yarn-deps-
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Run security audit
+        run: yarn npm audit --severity moderate
+
+      - name: Run lint
+        run: yarn lint:ci
+
+      - name: Run type check
+        run: yarn tscheck:ci
+
+      - name: Run tests
+        run: yarn test

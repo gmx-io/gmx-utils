@@ -1,0 +1,69 @@
+import { OrderType } from './types.js';
+
+// src/configs/twap.ts
+var DEFAULT_TWAP_NUMBER_OF_PARTS = 5;
+var MIN_TWAP_NUMBER_OF_PARTS = 2;
+var MAX_TWAP_NUMBER_OF_PARTS = 30;
+function isSwapOrderType(orderType) {
+  return [OrderType.MarketSwap, OrderType.LimitSwap].includes(orderType);
+}
+
+// src/domain/twap/utils.ts
+function getIsValidTwapParams(duration, numberOfParts) {
+  return duration.hours >= 0 && duration.minutes >= 0 && numberOfParts >= MIN_TWAP_NUMBER_OF_PARTS && numberOfParts <= MAX_TWAP_NUMBER_OF_PARTS;
+}
+function getTwapDurationInSeconds(duration) {
+  return duration.hours * 60 * 60 + duration.minutes * 60;
+}
+function getTwapValidFromTime(duration, numberOfParts, partIndex) {
+  const durationMinutes = duration.hours * 60 + duration.minutes;
+  const durationMs = durationMinutes * 60;
+  const startTime = Math.ceil(Date.now() / 1e3);
+  return BigInt(
+    Math.floor(startTime + durationMs / (numberOfParts - 1) * partIndex)
+  );
+}
+function changeTwapNumberOfPartsValue(value) {
+  if (value < MIN_TWAP_NUMBER_OF_PARTS) {
+    return MIN_TWAP_NUMBER_OF_PARTS;
+  }
+  if (value > MAX_TWAP_NUMBER_OF_PARTS) {
+    return MAX_TWAP_NUMBER_OF_PARTS;
+  }
+  if (isNaN(value)) {
+    return DEFAULT_TWAP_NUMBER_OF_PARTS;
+  }
+  return value;
+}
+function getTwapOrderKey({
+  twapId,
+  orderType,
+  pool,
+  isLong,
+  collateralTokenSymbol,
+  swapPath,
+  account,
+  initialCollateralToken
+}) {
+  if (isSwapOrderType(orderType)) {
+    return `${twapId}-${swapPath.join(
+      "-"
+    )}-${account}-${initialCollateralToken}`;
+  }
+  const type = isLong ? "long" : "short";
+  return `${twapId}-${type}-${pool}-${collateralTokenSymbol}`;
+}
+function makeTwapValidFromTimeGetter(duration, numberOfParts) {
+  const durationMinutes = duration.hours * 60 + duration.minutes;
+  const durationMs = durationMinutes * 60;
+  const startTime = Math.ceil(Date.now() / 1e3);
+  return (part) => {
+    return BigInt(
+      Math.floor(startTime + durationMs / (numberOfParts - 1) * part)
+    );
+  };
+}
+
+export { changeTwapNumberOfPartsValue, getIsValidTwapParams, getTwapDurationInSeconds, getTwapOrderKey, getTwapValidFromTime, makeTwapValidFromTimeGetter };
+//# sourceMappingURL=utils.js.map
+//# sourceMappingURL=utils.js.map

@@ -1,0 +1,11 @@
+import { Token, TokenData, TokenPrices, TokensData } from "./types";
+export declare function convertToTokenAmount(usd: bigint | undefined, tokenDecimals: number | undefined, price: bigint | undefined): bigint | undefined;
+export declare function convertToUsd(tokenAmount: bigint | undefined, tokenDecimals: number | undefined, price: bigint | undefined): bigint | undefined;
+export declare function convertBetweenTokens(tokenAmount: bigint | undefined, fromToken: TokenData | undefined, toToken: TokenData | undefined, maximize: boolean): bigint | undefined;
+export declare function getMidPrice(prices: TokenPrices): bigint;
+export declare function getIsEquivalentTokens(token1: Token, token2: Token): boolean;
+export declare function getTokenData(tokensData?: TokensData, address?: string, convertTo?: "wrapped" | "native"): TokenData | undefined;
+export declare function getIsWrap(token1: Token, token2: Token): boolean | undefined;
+export declare function getIsUnwrap(token1: Token, token2: Token): boolean | undefined;
+export declare function getIsStake(token1: Token, token2: Token): boolean | undefined;
+export declare function getIsUnstake(token1: Token, token2: Token): boolean | undefined;

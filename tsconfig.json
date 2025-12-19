@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "outDir": "./build/esm",
+    "lib": ["esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "noImplicitThis": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "declaration": true,
+    "moduleResolution": "node",
+    "composite": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": "./src",
+    "paths": {
+      "domain/*": ["domain/*"],
+      "lib/*": ["lib/*"],
+      "types/*": ["types/*"],
+      "configs/*": ["configs/*"],
+      "abis/*": ["abis/*"],
+      "abis": ["abis/index"],
+      "utils/*": ["lib/utils/*"],
+      "codegen/*": ["codegen/*"],
+      "test/*": ["../test/*"],
+      "transactions/*": ["transactions/*"]
+    }
+  },
+  "include": ["./src", "./src/**/*.json", "scripts"]
+}

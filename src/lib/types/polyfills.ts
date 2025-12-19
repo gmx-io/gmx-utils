@@ -1,0 +1,24 @@
+import "core-js/stable/aggregate-error";
+import "core-js/stable/array/at";
+import "core-js/stable/array/flat";
+import "core-js/stable/array/flat-map";
+import "core-js/stable/array/find-last-index";
+import "core-js/stable/object/from-entries";
+import "core-js/stable/promise/any";
+import "core-js/stable/promise/all-settled";
+import "core-js/stable/promise/with-resolvers";
+
+export {};
+
+declare global {
+  interface AbortSignal {
+    addEventListener(type: "abort", listener: () => void): void;
+  }
+  interface BigInt {
+    toJSON(): string;
+  }
+}
+
+BigInt.prototype.toJSON = function (): string {
+  return this.toString();
+};

@@ -1,0 +1,30 @@
+diff --git a/dist/types/register.d.ts b/dist/types/register.d.ts
+index 1160bedcb1ac970119f92a2b79a4be184c0c63f1..ac0fd4e148223b213d2e8c568cc45ee3c30c9921 100644
+--- a/dist/types/register.d.ts
++++ b/dist/types/register.d.ts
+@@ -21,7 +21,7 @@ export type ResolvedRegister = {
+     } ? type : DefaultRegister['bigIntType'];
+     /**
+      * TypeScript type to use for `bytes` values
+-     * @default { inputs: `0x${string}`; outputs: `0x${string}`; }
++     * @default { inputs: string; outputs: string; }
+      */
+     bytesType: Register extends {
+         bytesType: infer type extends {
+@@ -112,13 +112,13 @@ export type DefaultRegister = {
+     /** Upper bound for fixed array length */
+     fixedArrayMaxLength: 99;
+     /** TypeScript type to use for `address` values */
+-    addressType: `0x${string}`;
++    addressType: string;
+     /** TypeScript type to use for `bytes` values */
+     bytesType: {
+         /** TypeScript type to use for `bytes` input values */
+-        inputs: `0x${string}`;
++        inputs: string;
+         /** TypeScript type to use for `bytes` output values */
+-        outputs: `0x${string}`;
++        outputs: string;
+     };
+     /** TypeScript type to use for `int<M>` and `uint<M>` values, where `M > 48` */
+     bigIntType: bigint;

@@ -1,0 +1,106 @@
+{
+  "name": "@gmx-io/utils",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "yarn@4.12.0",
+  "main": "./build/esm/src/index.js",
+  "module": "./build/esm/src/index.js",
+  "types": "./build/esm/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/esm/src/index.js",
+      "types": "./build/esm/src/index.d.ts"
+    },
+    "./configs/*": {
+      "import": "./build/esm/src/configs/*.js",
+      "types": "./build/esm/src/configs/*.d.ts"
+    },
+    "./abis/*": {
+      "import": "./build/esm/src/abis/*.js",
+      "types": "./build/esm/src/abis/*.d.ts"
+    },
+    "./prebuilt/*": {
+      "import": "./build/esm/src/prebuilt/*.js",
+      "types": "./build/esm/src/prebuilt/*.d.ts"
+    },
+    "./domain/*": {
+      "import": "./build/esm/src/domain/*.js",
+      "types": "./build/esm/src/domain/*.d.ts"
+    }
+  },
+  "scripts": {
+    "prebuild": "yarn tsx scripts/prebuild",
+    "subsquid-codegen": "./node_modules/@graphql-codegen/cli/cjs/bin.js -c ./scripts/subsquid-codegen.ts",
+    "build:types": "tsc -p tsconfig.dts.json",
+    "build": "yarn subsquid-codegen && yarn prebuild && tsup && yarn build:types",
+    "prepare": "husky",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "coverage:baseline": "yarn test:coverage && node scripts/check-coverage-baseline.cjs",
+    "coverage:check": "node scripts/check-coverage-baseline.cjs",
+    "tscheck": "tsc -p tsconfig.json --noEmit --incremental",
+    "tscheck:ci": "tsc -p tsconfig.json --noEmit",
+    "lint": "node node_modules/.bin/eslint src --fix --cache --cache-location .eslintcache",
+    "lint:ci": "node node_modules/.bin/eslint src --max-warnings=0",
+    "check": "yarn lint && yarn tscheck",
+    "check:ci": "yarn lint:ci && yarn tscheck:ci",
+    "check:parallel": "node node_modules/.bin/concurrently -n lint,tscheck -c blue,green \"yarn lint\" \"yarn tscheck\"",
+    "clean": "rm -rf build/**/*.tsbuildinfo",
+    "clean:cache": "rm -rf .eslintcache tsconfig.tsbuildinfo build/**/*.tsbuildinfo",
+    "clean:lint": "rm -rf .eslintcache",
+    "clean:ts": "rm -rf tsconfig.tsbuildinfo build/**/*.tsbuildinfo"
+  },
+  "dependencies": {
+    "@gelatonetwork/relay-sdk": "5.6.0",
+    "core-js": "^3.47.0",
+    "cross-fetch": "4.0.0",
+    "crypto-js": "4.2.0",
+    "graphql": "16.12.0",
+    "lodash": "4.17.21",
+    "query-string": "7.1.1",
+    "typescript": "5.4.2",
+    "viem": "patch:viem@npm%3A2.39.0#~/.yarn/patches/viem-npm-2.39.0-c113f391fd.patch"
+  },
+  "resolutions": {
+    "viem": "patch:viem@npm%3A2.39.0#~/.yarn/patches/viem-npm-2.39.0-c113f391fd.patch",
+    "abitype@npm:1.1.0": "patch:abitype@npm%3A1.1.0#~/.yarn/patches/abitype-npm-1.1.0-51e07ef1f1.patch",
+    "abitype@npm:^1.0.9": "patch:abitype@npm%3A1.1.0#~/.yarn/patches/abitype-npm-1.1.0-51e07ef1f1.patch"
+  },
+  "devDependencies": {
+    "@babel/core": "7.28.5",
+    "@babel/plugin-transform-private-property-in-object": "7.25.9",
+    "@esbuild-plugins/tsconfig-paths": "^0.1.2",
+    "@eslint/compat": "2.0.0",
+    "@eslint/eslintrc": "3.3.3",
+    "@graphql-codegen/cli": "5.0.6",
+    "@graphql-codegen/client-preset": "4.8.1",
+    "@graphql-codegen/typescript": "4.1.6",
+    "@graphql-codegen/typescript-operations": "4.6.1",
+    "@types/lodash": "4.14.198",
+    "@types/node": "20.19.26",
+    "@typescript-eslint/eslint-plugin": "8.26.1",
+    "@typescript-eslint/parser": "8.26.1",
+    "@typescript-eslint/utils": "8.49.0",
+    "@vitest/coverage-v8": "^4.0.15",
+    "concurrently": "9.1.2",
+    "esbuild-plugin-file-path-extensions": "^2.1.4",
+    "eslint": "9.39.1",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-config-recommended": "4.1.0",
+    "eslint-import-resolver-typescript": "4.2.2",
+    "eslint-plugin-es-x": "8.1.0",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-local-rules": "2.0.1",
+    "eslint-plugin-package-json": "0.85.0",
+    "globals": "16.5.0",
+    "husky": "9.1.7",
+    "jsonc-eslint-parser": "2.4.2",
+    "tsup": "^8.0.0",
+    "tsx": "4.19.0",
+    "vitest": "3.2.4"
+  }
+}

@@ -1,0 +1,56 @@
+import { GlvInfo } from "domain/glv/types";
+import { DepositAmounts } from "domain/gm/types";
+import { MarketInfo } from "domain/markets/types";
+import { TokenData } from "domain/tokens/types";
+import { WithdrawalAmounts } from "./types";
+export declare function getDepositAmounts(p: {
+    marketInfo: MarketInfo;
+    marketToken: TokenData;
+    longToken: TokenData;
+    shortToken: TokenData;
+    longTokenAmount: bigint;
+    shortTokenAmount: bigint;
+    glvTokenAmount?: bigint;
+    glvToken?: TokenData;
+    marketTokenAmount: bigint;
+    strategy: "byCollaterals" | "byMarketToken";
+    includeLongToken: boolean;
+    includeShortToken: boolean;
+    uiFeeFactor: bigint;
+    forShift?: boolean;
+    isMarketTokenDeposit: boolean;
+    glvInfo?: GlvInfo;
+}): DepositAmounts;
+export declare function getWithdrawalAmounts(p: {
+    marketInfo: MarketInfo;
+    marketToken: TokenData;
+    marketTokenAmount: bigint;
+    longTokenAmount: bigint;
+    shortTokenAmount: bigint;
+    uiFeeFactor: bigint;
+    strategy: "byMarketToken" | "byLongCollateral" | "byShortCollateral" | "byCollaterals";
+    forShift?: boolean;
+    glvInfo?: GlvInfo;
+    glvTokenAmount?: bigint;
+    glvToken?: TokenData;
+}): WithdrawalAmounts;
+export type ShiftAmounts = {
+    fromTokenAmount: bigint;
+    fromTokenUsd: bigint;
+    fromLongTokenAmount: bigint;
+    fromShortTokenAmount: bigint;
+    toTokenAmount: bigint;
+    toTokenUsd: bigint;
+    uiFeeUsd: bigint;
+    swapPriceImpactDeltaUsd: bigint;
+};
+export declare function getShiftAmounts({ strategy, fromToken, fromMarketInfo, toToken, toMarketInfo, fromTokenAmount, toTokenAmount, uiFeeFactor, }: {
+    strategy: "byFromToken" | "byToToken";
+    fromToken: TokenData;
+    fromMarketInfo: MarketInfo;
+    toToken: TokenData;
+    toMarketInfo: MarketInfo;
+    fromTokenAmount: bigint;
+    toTokenAmount: bigint;
+    uiFeeFactor: bigint;
+}): ShiftAmounts;

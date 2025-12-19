@@ -1,0 +1,48 @@
+import { ARBITRUM_SEPOLIA, BOTANIX, AVALANCHE_FUJI, AVALANCHE, ARBITRUM } from './chains.js';
+
+// src/configs/oracleKeeper.ts
+var ORACLE_KEEPER_URLS = {
+  [ARBITRUM]: "https://arbitrum-api.gmxinfra.io",
+  [AVALANCHE]: "https://avalanche-api.gmxinfra.io",
+  [AVALANCHE_FUJI]: "https://synthetics-api-avax-fuji-upovm.ondigitalocean.app",
+  [BOTANIX]: "https://botanix-api.gmxinfra.io",
+  [ARBITRUM_SEPOLIA]: "https://dolphin-app-a2dup.ondigitalocean.app"
+};
+var ORACLE_KEEPER_FALLBACK_URLS = {
+  [ARBITRUM]: [
+    "https://arbitrum-api-fallback.gmxinfra.io",
+    "https://arbitrum-api-fallback.gmxinfra2.io",
+    "https://arbitrum-api.gmxinfra.io"
+  ],
+  [AVALANCHE]: [
+    "https://avalanche-api-fallback.gmxinfra.io",
+    "https://avalanche-api-fallback.gmxinfra2.io",
+    "https://avalanche-api.gmxinfra.io"
+  ],
+  [AVALANCHE_FUJI]: [
+    "https://synthetics-api-avax-fuji-upovm.ondigitalocean.app",
+    "https://synthetics-api-avax-fuji.gmxinfra.io"
+  ],
+  [BOTANIX]: [
+    "https://botanix-api-fallback.gmxinfra.io",
+    "https://botanix-api-fallback.gmxinfra2.io",
+    "https://botanix-api.gmxinfra.io"
+  ],
+  [ARBITRUM_SEPOLIA]: ["https://dolphin-app-a2dup.ondigitalocean.app"]
+};
+function getOracleKeeperUrl(chainId) {
+  if (!ORACLE_KEEPER_URLS[chainId]) {
+    throw new Error(`No oracle keeper url for chain ${chainId}`);
+  }
+  return ORACLE_KEEPER_URLS[chainId];
+}
+function getOracleKeeperFallbackUrls(chainId) {
+  if (!ORACLE_KEEPER_FALLBACK_URLS[chainId]) {
+    throw new Error(`No oracle keeper fallback urls for chain ${chainId}`);
+  }
+  return ORACLE_KEEPER_FALLBACK_URLS[chainId];
+}
+
+export { getOracleKeeperFallbackUrls, getOracleKeeperUrl };
+//# sourceMappingURL=oracleKeeper.js.map
+//# sourceMappingURL=oracleKeeper.js.map

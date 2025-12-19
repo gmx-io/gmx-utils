@@ -1,0 +1,33 @@
+import { ExternalSwapQuoteParams } from "domain/externalSwap/types";
+import { MarketsInfoData } from "domain/markets/types";
+import { FindSwapPath, SwapOptimizationOrderArray, SwapRoute, SwapAmounts, TokensRatio } from "domain/swap/types";
+import type { TokenData } from "domain/tokens/types";
+export declare function getSwapAmountsByFromValue(p: {
+    tokenIn: TokenData;
+    tokenOut: TokenData;
+    amountIn: bigint;
+    triggerRatio?: TokensRatio;
+    isLimit: boolean;
+    swapOptimizationOrder?: SwapOptimizationOrderArray;
+    allowedSwapSlippageBps?: bigint;
+    uiFeeFactor: bigint;
+    marketsInfoData: MarketsInfoData | undefined;
+    chainId: number;
+    externalSwapQuoteParams: ExternalSwapQuoteParams | undefined;
+    findSwapPath: FindSwapPath;
+}): SwapAmounts;
+export declare function getSwapAmountsByToValue(p: {
+    tokenIn: TokenData;
+    tokenOut: TokenData;
+    amountOut: bigint;
+    triggerRatio?: TokensRatio;
+    isLimit: boolean;
+    swapOptimizationOrder?: SwapOptimizationOrderArray;
+    allowedSwapSlippageBps?: bigint;
+    uiFeeFactor: bigint;
+    marketsInfoData: MarketsInfoData | undefined;
+    chainId: number;
+    externalSwapQuoteParams: ExternalSwapQuoteParams | undefined;
+    findSwapPath: FindSwapPath;
+}): SwapAmounts;
+export declare function getSwapPathComparator(order?: SwapOptimizationOrderArray | undefined): (a: SwapRoute, b: SwapRoute) => 1 | 0 | -1;
