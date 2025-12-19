@@ -1,14 +1,13 @@
 import { ARBITRUM_SEPOLIA, BOTANIX, AVALANCHE_FUJI, AVALANCHE, ARBITRUM } from './chains.js';
 
-// src/configs/oracleKeeper.ts
-var ORACLE_KEEPER_URLS = {
+const ORACLE_KEEPER_URLS = {
   [ARBITRUM]: "https://arbitrum-api.gmxinfra.io",
   [AVALANCHE]: "https://avalanche-api.gmxinfra.io",
   [AVALANCHE_FUJI]: "https://synthetics-api-avax-fuji-upovm.ondigitalocean.app",
   [BOTANIX]: "https://botanix-api.gmxinfra.io",
   [ARBITRUM_SEPOLIA]: "https://dolphin-app-a2dup.ondigitalocean.app"
 };
-var ORACLE_KEEPER_FALLBACK_URLS = {
+const ORACLE_KEEPER_FALLBACK_URLS = {
   [ARBITRUM]: [
     "https://arbitrum-api-fallback.gmxinfra.io",
     "https://arbitrum-api-fallback.gmxinfra2.io",

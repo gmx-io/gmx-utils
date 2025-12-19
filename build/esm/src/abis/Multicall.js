@@ -1,4 +1,3 @@
-// src/abis/Multicall.ts
 var Multicall_default = [
   {
     inputs: [

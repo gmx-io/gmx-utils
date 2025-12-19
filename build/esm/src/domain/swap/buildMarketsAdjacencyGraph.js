@@ -1,4 +1,3 @@
-// src/domain/swap/buildMarketsAdjacencyGraph.ts
 function buildMarketsAdjacencyGraph(marketsMap) {
   const graph = {};
   for (const marketTokenAddress in marketsMap) {

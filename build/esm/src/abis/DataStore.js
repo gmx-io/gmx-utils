@@ -1,4 +1,3 @@
-// src/abis/DataStore.ts
 var DataStore_default = [
   {
     inputs: [{ internalType: "contract RoleStore", name: "_roleStore", type: "address" }],

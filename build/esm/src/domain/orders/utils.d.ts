@@ -1,4 +1,4 @@
-import { OrderType } from "./types";
+import { OrderType } from "./types.js";
 export declare function isMarketOrderType(orderType: OrderType): boolean;
 export declare function isLimitOrderType(orderType: OrderType): boolean;
 export declare function isDecreaseOrderType(orderType: OrderType): boolean;

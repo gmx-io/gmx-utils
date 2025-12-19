@@ -1,4 +1,4 @@
-import type { TokenData } from "domain/tokens/types";
+import type { TokenData } from "../tokens/types.js";
 export type PnlFactorType = "FOR_DEPOSITS" | "FOR_WITHDRAWALS" | "FOR_TRADERS";
 export type MarketSdkConfig = {
     marketToken: string;

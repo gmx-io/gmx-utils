@@ -1,4 +1,4 @@
-import type { UserReferralInfo } from "./types";
+import type { UserReferralInfo } from "./types.js";
 export declare function getUserReferralInfo(p: {
     userReferralCode: string | undefined;
     userReferralCodeString: string | undefined;

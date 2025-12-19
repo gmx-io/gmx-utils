@@ -1,4 +1,4 @@
-import { ExternalSwapPath } from "./types";
+import { ExternalSwapPath } from "./types.js";
 export declare const AVAILABLE_BOTANIX_DEPOSIT_PAIRS: {
     from: string;
     to: string;

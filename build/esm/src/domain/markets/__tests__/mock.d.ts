@@ -1,5 +1,5 @@
-import { MarketInfo, MarketsData, MarketsInfoData } from "domain/markets/types";
-import { TokensData } from "domain/tokens/types";
+import { MarketInfo, MarketsData, MarketsInfoData } from "../../markets/types.js";
+import { TokensData } from "../../tokens/types.js";
 export declare function mockMarketKeys(): string[];
 export declare function mockMarketsData(marketKeys: string[]): MarketsData;
 export declare function mockMarketsInfoData(tokensData: TokensData, marketKeys: string[], overrides?: {

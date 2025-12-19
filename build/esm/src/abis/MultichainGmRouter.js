@@ -1,4 +1,3 @@
-// src/abis/MultichainGmRouter.ts
 var MultichainGmRouter_default = [
   {
     inputs: [

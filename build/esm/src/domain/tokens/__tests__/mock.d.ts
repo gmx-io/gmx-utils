@@ -1,4 +1,4 @@
-import { TokenData, TokensData } from "domain/tokens/types";
+import { TokenData, TokensData } from "../../tokens/types.js";
 export declare function usdToToken(usd: number, token: TokenData): bigint;
 export declare function mockTokensData(overrides?: {
     [symbol: string]: Partial<TokenData>;

@@ -1,5 +1,5 @@
-import { SwapPaths } from "domain/swap/types";
-import { MarketsGraph } from "./buildMarketsAdjacencyGraph";
+import { SwapPaths } from "../swap/types.js";
+import { MarketsGraph } from "./buildMarketsAdjacencyGraph.js";
 declare const MARKETS_ADJACENCY_GRAPH: {
     [chainId: number]: MarketsGraph;
 };

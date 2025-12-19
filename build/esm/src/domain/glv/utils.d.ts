@@ -1,6 +1,6 @@
-import type { MarketInfo } from "domain/markets/types";
-import type { TokenData, TokensData } from "domain/tokens/types";
-import type { GlvInfo, GlvMarket, GlvOrMarketInfo } from "./types";
+import type { MarketInfo } from "../markets/types.js";
+import type { TokenData, TokensData } from "../tokens/types.js";
+import type { GlvInfo, GlvMarket, GlvOrMarketInfo } from "./types.js";
 export declare function getMaxUsdCapUsdInGmGlvMarket(market: GlvMarket, gmToken?: TokenData): bigint;
 export declare function getMaxUsdBuyableAmountInMarketWithGm(market: GlvMarket, glv: GlvInfo, gmMarketInfo: MarketInfo, gmMarketToken: TokenData, getMintableMarketTokens: (marketInfo: MarketInfo, marketToken: TokenData) => {
     mintableAmount: bigint;

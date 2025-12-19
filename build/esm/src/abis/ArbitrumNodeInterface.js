@@ -1,4 +1,3 @@
-// src/abis/ArbitrumNodeInterface.ts
 var ArbitrumNodeInterface_default = [
   {
     inputs: [

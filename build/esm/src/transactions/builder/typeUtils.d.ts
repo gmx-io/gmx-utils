@@ -1,4 +1,4 @@
-import { ExpressTxnParams, GlobalExpressParams } from "../express/types";
+import { ExpressTxnParams, GlobalExpressParams } from "../express/types.js";
 export type BaseCapabilities = {
     canSendWallet: boolean;
     canSendExpress: boolean;

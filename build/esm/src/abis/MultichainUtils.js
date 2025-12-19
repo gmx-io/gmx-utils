@@ -1,4 +1,3 @@
-// src/abis/MultichainUtils.ts
 var MultichainUtils_default = [
   {
     inputs: [

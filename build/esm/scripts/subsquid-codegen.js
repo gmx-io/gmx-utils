@@ -1,5 +1,4 @@
-// scripts/subsquid-codegen.ts
-var config = {
+const config = {
   schema: "https://gmx.squids.live/gmx-synthetics-arbitrum:prod/api/graphql",
   overwrite: true,
   debug: true,

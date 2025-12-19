@@ -1,8 +1,8 @@
-import { ExternalSwapQuote } from "domain/externalSwap/types";
-import { TradeFees } from "domain/fees/types";
-import { OrderInfo } from "domain/orders/types";
-import { SwapStats } from "domain/swap/types";
-import { TradeFlags, TradeMode, TradeType } from "./types";
+import { ExternalSwapQuote } from "../externalSwap/types.js";
+import { TradeFees } from "../fees/types.js";
+import { OrderInfo } from "../orders/types.js";
+import { SwapStats } from "../swap/types.js";
+import { TradeFlags, TradeMode, TradeType } from "./types.js";
 export declare const getTradeFlags: (tradeType: TradeType, tradeMode: TradeMode) => TradeFlags;
 export declare function getTradeFlagsForOrder(order: OrderInfo): TradeFlags;
 export declare function getTradeFlagsForCollateralEdit(isLong: boolean | undefined, isIncrease: boolean): TradeFlags;

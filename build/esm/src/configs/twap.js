@@ -1,8 +1,7 @@
-// src/configs/twap.ts
-var DEFAULT_TWAP_NUMBER_OF_PARTS = 5;
-var MIN_TWAP_NUMBER_OF_PARTS = 2;
-var MAX_TWAP_NUMBER_OF_PARTS = 30;
-var DEFAULT_TWAP_DURATION = {
+const DEFAULT_TWAP_NUMBER_OF_PARTS = 5;
+const MIN_TWAP_NUMBER_OF_PARTS = 2;
+const MAX_TWAP_NUMBER_OF_PARTS = 30;
+const DEFAULT_TWAP_DURATION = {
   minutes: 0,
   hours: 10
 };

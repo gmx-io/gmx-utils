@@ -1,4 +1,3 @@
-// src/abis/LayerZeroProvider.ts
 var LayerZeroProvider_default = [
   {
     inputs: [

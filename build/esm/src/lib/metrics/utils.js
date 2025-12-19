@@ -1,4 +1,3 @@
-// src/lib/metrics/utils.ts
 function sendOrderSimulatedMetric(_metricId, _error) {
 }
 function sendTxnErrorMetric(_error, _errorSource) {

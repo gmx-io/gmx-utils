@@ -1,4 +1,3 @@
-// src/domain/orders/types.ts
 var OrderType = /* @__PURE__ */ ((OrderType2) => {
   OrderType2[OrderType2["MarketSwap"] = 0] = "MarketSwap";
   OrderType2[OrderType2["LimitSwap"] = 1] = "LimitSwap";

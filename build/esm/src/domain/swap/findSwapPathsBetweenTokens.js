@@ -1,28 +1,6 @@
-import isPlainObject from 'lodash/isPlainObject';
+import { objectKeysDeep } from '../../lib/objects/index.js';
+import { MAX_EDGE_PATH_LENGTH } from '../../configs/swap.js';
 
-// src/lib/objects/index.ts
-function objectKeysDeep(obj, depth = 1) {
-  const keys = /* @__PURE__ */ new Set();
-  const scanQueue = [{ obj, currentDepth: 0 }];
-  while (scanQueue.length > 0) {
-    const { obj: obj2, currentDepth } = scanQueue.pop();
-    if (currentDepth > depth) {
-      continue;
-    }
-    for (const key of Object.keys(obj2)) {
-      keys.add(key);
-      if (isPlainObject(obj2[key])) {
-        scanQueue.push({ obj: obj2[key], currentDepth: currentDepth + 1 });
-      }
-    }
-  }
-  return Array.from(keys);
-}
-
-// src/configs/swap.ts
-var MAX_EDGE_PATH_LENGTH = 3;
-
-// src/domain/swap/findSwapPathsBetweenTokens.ts
 function findSwapPathsBetweenTokens(graph) {
   const swapRoutes = {};
   const allTokens = objectKeysDeep(graph, 1).sort();

@@ -1,4 +1,3 @@
-// src/abis/MultichainSubaccountRouter.ts
 var MultichainSubaccountRouter_default = [
   {
     inputs: [

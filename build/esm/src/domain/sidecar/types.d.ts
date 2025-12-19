@@ -1,6 +1,6 @@
-import { DecreasePositionAmounts } from "domain/decrease/types";
-import { IncreasePositionAmounts } from "domain/increase/types";
-import { PositionOrderInfo } from "domain/orders/types";
+import { DecreasePositionAmounts } from "../decrease/types.js";
+import { IncreasePositionAmounts } from "../increase/types.js";
+import { PositionOrderInfo } from "../orders/types.js";
 export type OrderTxnType = "create" | "update" | "cancel";
 export type EntryField = {
     input: string;

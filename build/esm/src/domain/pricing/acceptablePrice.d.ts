@@ -1,4 +1,4 @@
-import { MarketInfo } from "domain/markets/types";
+import { MarketInfo } from "../markets/types.js";
 export declare function getAcceptablePriceInfo(p: {
     marketInfo: MarketInfo;
     isIncrease: boolean;

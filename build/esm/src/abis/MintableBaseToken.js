@@ -1,4 +1,3 @@
-// src/abis/MintableBaseToken.ts
 var MintableBaseToken_default = [
   {
     inputs: [

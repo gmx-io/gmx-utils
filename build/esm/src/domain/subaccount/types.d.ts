@@ -1,5 +1,5 @@
-import type { AnyChainId, ContractsChainId } from "configs/chains";
-import { ISigner } from "lib/signing/signing";
+import type { AnyChainId, ContractsChainId } from "../../configs/chains.js";
+import { ISigner } from "../../lib/signing/signing.js";
 export type SubaccountSerializedConfig = {
     privateKey: string;
     address: string;

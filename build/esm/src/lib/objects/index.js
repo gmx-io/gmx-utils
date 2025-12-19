@@ -1,6 +1,5 @@
 import isPlainObject from 'lodash/isPlainObject';
 
-// src/lib/objects/index.ts
 function setByKey(obj, key, data) {
   return { ...obj, [key]: data };
 }

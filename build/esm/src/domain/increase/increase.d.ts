@@ -1,13 +1,13 @@
-import { ExternalSwapQuote, ExternalSwapQuoteParams } from "domain/externalSwap/types";
-import { IncreasePositionAmounts } from "domain/increase/types";
-import { MarketInfo, MarketsInfoData } from "domain/markets/types";
-import { PositionInfo } from "domain/positions/types";
-import { NextPositionValues } from "domain/positions/types";
-import { TriggerThresholdType } from "domain/pricing/types";
-import { UserReferralInfo } from "domain/referrals/types";
-import { TokensRatio } from "domain/swap/types";
-import { FindSwapPath } from "domain/swap/types";
-import { TokenData } from "domain/tokens/types";
+import { ExternalSwapQuote, ExternalSwapQuoteParams } from "../externalSwap/types.js";
+import { IncreasePositionAmounts } from "../increase/types.js";
+import { MarketInfo, MarketsInfoData } from "../markets/types.js";
+import { PositionInfo } from "../positions/types.js";
+import { NextPositionValues } from "../positions/types.js";
+import { TriggerThresholdType } from "../pricing/types.js";
+import { UserReferralInfo } from "../referrals/types.js";
+import { TokensRatio } from "../swap/types.js";
+import { FindSwapPath } from "../swap/types.js";
+import { TokenData } from "../tokens/types.js";
 type IncreasePositionParams = {
     marketInfo: MarketInfo;
     indexToken: TokenData;

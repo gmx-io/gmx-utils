@@ -1,4 +1,3 @@
-// src/abis/GlvReader.ts
 var GlvReader_default = [
   {
     "inputs": [],

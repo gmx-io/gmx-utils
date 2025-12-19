@@ -1,7 +1,7 @@
-import { ContractsChainId } from "configs/chains";
-import { DecreasePositionSwapType } from "domain/decrease/types";
-import { ExecutionFee, GasLimitsConfig, L1ExpressOrderGasReference } from "domain/executionFee/types";
-import { TokenData, TokensData } from "domain/tokens/types";
+import { ContractsChainId } from "../../configs/chains.js";
+import { DecreasePositionSwapType } from "../decrease/types.js";
+import { ExecutionFee, GasLimitsConfig, L1ExpressOrderGasReference } from "../executionFee/types.js";
+import { TokenData, TokensData } from "../tokens/types.js";
 export declare function getExecutionFee(chainId: number, gasLimits: GasLimitsConfig, tokensData: TokensData, estimatedGasLimit: bigint, gasPrice: bigint, oraclePriceCount: bigint, numberOfParts?: number): ExecutionFee | undefined;
 export declare function estimateRelayerGasLimit({ gasLimits, tokenPermitsCount, feeSwapsCount, feeExternalCallsGasLimit, oraclePriceCount, transactionPayloadGasLimit, l1GasLimit, }: {
     gasLimits: GasLimitsConfig;

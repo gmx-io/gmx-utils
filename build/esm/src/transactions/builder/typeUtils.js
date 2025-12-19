@@ -1,4 +1,3 @@
-// src/transactions/builder/typeUtils.ts
 function withBaseState(state, updates) {
   return {
     ...state,

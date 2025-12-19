@@ -1,4 +1,3 @@
-// src/abis/SubaccountGelatoRelayRouter.ts
 var SubaccountGelatoRelayRouter_default = [
   {
     inputs: [

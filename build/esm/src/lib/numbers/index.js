@@ -1,24 +1,23 @@
 import { formatUnits, parseUnits } from 'viem';
 import { bigMath } from '../bigmath/index.js';
 
-// src/lib/numbers/index.ts
-var USD_DECIMALS = 30;
-var BASIS_POINTS_DIVISOR = 1e4;
-var BASIS_POINTS_DIVISOR_BIGINT = 10000n;
-var BASIS_POINTS_DECIMALS = 4;
-var PRECISION_DECIMALS = 30;
-var PRECISION = expandDecimals(1, PRECISION_DECIMALS);
-var BN_ZERO = 0n;
-var BN_ONE = 1n;
-var BN_NEGATIVE_ONE = -1n;
-var MaxUint256 = BigInt(
+const USD_DECIMALS = 30;
+const BASIS_POINTS_DIVISOR = 1e4;
+const BASIS_POINTS_DIVISOR_BIGINT = 10000n;
+const BASIS_POINTS_DECIMALS = 4;
+const PRECISION_DECIMALS = 30;
+const PRECISION = expandDecimals(1, PRECISION_DECIMALS);
+const BN_ZERO = 0n;
+const BN_ONE = 1n;
+const BN_NEGATIVE_ONE = -1n;
+const MaxUint256 = BigInt(
   "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
 );
-var PERCENT_PRECISION_DECIMALS = PRECISION_DECIMALS - 2;
-var MAX_EXCEEDING_THRESHOLD = "1000000000";
-var MIN_EXCEEDING_THRESHOLD = "0.01";
-var TRIGGER_PREFIX_ABOVE = ">";
-var TRIGGER_PREFIX_BELOW = "<";
+const PERCENT_PRECISION_DECIMALS = PRECISION_DECIMALS - 2;
+const MAX_EXCEEDING_THRESHOLD = "1000000000";
+const MIN_EXCEEDING_THRESHOLD = "0.01";
+const TRIGGER_PREFIX_ABOVE = ">";
+const TRIGGER_PREFIX_BELOW = "<";
 function isNonZero(value) {
   return value !== 0 && value !== 0n;
 }
@@ -67,7 +66,7 @@ function numberToBigint(value, decimals) {
   }
   return negative ? -res : res;
 }
-var trimZeroDecimals = (amount) => {
+const trimZeroDecimals = (amount) => {
   if (parseFloat(amount) === parseInt(amount)) {
     return parseInt(amount).toString();
   }
@@ -349,7 +348,7 @@ function numberWithCommas(x, { showDollar = false } = {}) {
   parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   return `${showDollar ? "$\u200A" : ""}${parts.join(".")}`;
 }
-var formatAmount = (amount, tokenDecimals, displayDecimals, useCommas, defaultValue, visualMultiplier) => {
+const formatAmount = (amount, tokenDecimals, displayDecimals, useCommas, defaultValue, visualMultiplier) => {
   if (defaultValue === void 0 || defaultValue === null) {
     defaultValue = "...";
   }
@@ -376,7 +375,7 @@ var formatAmount = (amount, tokenDecimals, displayDecimals, useCommas, defaultVa
   }
   return amountStr;
 };
-var formatKeyAmount = (map, key, tokenDecimals, displayDecimals, useCommas) => {
+const formatKeyAmount = (map, key, tokenDecimals, displayDecimals, useCommas) => {
   const value = map ? map[key] ?? void 0 : void 0;
   if (value === void 0 || value === null) {
     return "...";
@@ -388,13 +387,13 @@ var formatKeyAmount = (map, key, tokenDecimals, displayDecimals, useCommas) => {
     useCommas
   );
 };
-var formatArrayAmount = (arr, index, tokenDecimals, displayDecimals, useCommas) => {
+const formatArrayAmount = (arr, index, tokenDecimals, displayDecimals, useCommas) => {
   if (!arr || arr[index] === void 0 || arr[index] === null) {
     return "...";
   }
   return formatAmount(arr[index], tokenDecimals, displayDecimals, useCommas);
 };
-var formatAmountFree = (amount, tokenDecimals, displayDecimals) => {
+const formatAmountFree = (amount, tokenDecimals, displayDecimals) => {
   if (amount === void 0 || amount === null) {
     return "...";
   }
@@ -424,7 +423,7 @@ function getLimitedDisplay(amount, tokenDecimals, opts = {}) {
     value
   };
 }
-var limitDecimals = (amount, maxDecimals) => {
+const limitDecimals = (amount, maxDecimals) => {
   let amountStr = amount.toString();
   if (maxDecimals === void 0) {
     return amountStr;
@@ -444,7 +443,7 @@ var limitDecimals = (amount, maxDecimals) => {
   }
   return amountStr;
 };
-var padDecimals = (amount, minDecimals) => {
+const padDecimals = (amount, minDecimals) => {
   let amountStr = amount.toString();
   const dotIndex = amountStr.indexOf(".");
   if (dotIndex !== -1) {
@@ -523,7 +522,7 @@ function bigNumberify(n) {
     return void 0;
   }
 }
-var parseValue = (value, tokenDecimals) => {
+const parseValue = (value, tokenDecimals) => {
   const pValue = parseFloat(value);
   if (isNaN(pValue)) {
     return void 0;

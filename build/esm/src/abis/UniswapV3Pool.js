@@ -1,4 +1,3 @@
-// src/abis/UniswapV3Pool.ts
 var UniswapV3Pool_default = [
   {
     anonymous: false,

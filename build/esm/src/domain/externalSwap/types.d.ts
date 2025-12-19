@@ -1,6 +1,6 @@
-import { FeeItem } from "domain/fees/types";
-import { SwapAmounts } from "domain/swap/types";
-import { TokensData } from "domain/tokens/types";
+import { FeeItem } from "../fees/types.js";
+import { SwapAmounts } from "../swap/types.js";
+import { TokensData } from "../tokens/types.js";
 export declare enum ExternalSwapAggregator {
     OpenOcean = "openOcean",
     BotanixStaking = "botanixStaking"

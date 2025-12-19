@@ -1,4 +1,3 @@
-// src/domain/referrals/types.ts
 var RebateDistributionType = /* @__PURE__ */ ((RebateDistributionType2) => {
   RebateDistributionType2["Rebate"] = "1";
   RebateDistributionType2["Claim"] = "1000";

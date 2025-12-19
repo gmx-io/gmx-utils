@@ -1,4 +1,3 @@
-// src/abis/MultichainClaimsRouter.ts
 var MultichainClaimsRouter_default = [
   {
     inputs: [

@@ -1,5 +1,5 @@
-import { Token, TokenPrices, TokenData } from "domain/tokens/types";
-import { MarketInfo } from "./types";
+import { Token, TokenPrices, TokenData } from "../tokens/types.js";
+import { MarketInfo } from "./types.js";
 export declare function getMarketFullName(p: {
     longToken: Token;
     shortToken: Token;

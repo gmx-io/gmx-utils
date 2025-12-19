@@ -1,4 +1,3 @@
-// src/domain/claimHistory/types.ts
 var ClaimType = /* @__PURE__ */ ((ClaimType2) => {
   ClaimType2["ClaimPriceImpact"] = "ClaimPriceImpact";
   ClaimType2["ClaimFunding"] = "ClaimFunding";

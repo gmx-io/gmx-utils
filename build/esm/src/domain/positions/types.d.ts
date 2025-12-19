@@ -1,5 +1,5 @@
-import type { Market, MarketInfo } from "domain/markets/types";
-import type { TokenData } from "domain/tokens/types";
+import type { Market, MarketInfo } from "../markets/types.js";
+import type { TokenData } from "../tokens/types.js";
 export type Position = {
     key: string;
     contractKey: string;

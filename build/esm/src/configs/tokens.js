@@ -2,9 +2,8 @@ import { zeroAddress } from 'viem';
 import { AVALANCHE, ARBITRUM, AVALANCHE_FUJI, BOTANIX, ARBITRUM_SEPOLIA } from './chains.js';
 import { getContract } from './contracts.js';
 
-// src/configs/tokens.ts
-var NATIVE_TOKEN_ADDRESS = zeroAddress;
-var TOKENS = {
+const NATIVE_TOKEN_ADDRESS = zeroAddress;
+const TOKENS = {
   [ARBITRUM]: [
     {
       name: "Ethereum",
@@ -1912,7 +1911,7 @@ var TOKENS = {
     }
   ]
 };
-var TOKEN_COLOR_MAP = {
+const TOKEN_COLOR_MAP = {
   ETH: "#6062a6",
   BTC: "#F7931A",
   WBTC: "#F7931A",
@@ -1946,14 +1945,14 @@ var TOKEN_COLOR_MAP = {
   SATS: "#F7931A",
   default: "#6062a6"
 };
-var TOKENS_MAP = {};
-var V1_TOKENS = {};
-var V2_TOKENS = {};
-var SYNTHETIC_TOKENS = {};
-var TOKENS_BY_SYMBOL_MAP = {};
-var WRAPPED_TOKENS_MAP = {};
-var NATIVE_TOKENS_MAP = {};
-var CHAIN_IDS = [ARBITRUM, AVALANCHE, AVALANCHE_FUJI, BOTANIX, ARBITRUM_SEPOLIA];
+const TOKENS_MAP = {};
+const V1_TOKENS = {};
+const V2_TOKENS = {};
+const SYNTHETIC_TOKENS = {};
+const TOKENS_BY_SYMBOL_MAP = {};
+const WRAPPED_TOKENS_MAP = {};
+const NATIVE_TOKENS_MAP = {};
+const CHAIN_IDS = [ARBITRUM, AVALANCHE, AVALANCHE_FUJI, BOTANIX, ARBITRUM_SEPOLIA];
 for (let j = 0; j < CHAIN_IDS.length; j++) {
   const chainId = CHAIN_IDS[j];
   TOKENS_MAP[chainId] = {};
@@ -2127,7 +2126,7 @@ function getStableTokens(chainId) {
 function getCategoryTokenAddresses(chainId, category) {
   return TOKENS[chainId].filter((token) => token.categories?.includes(category)).map((token) => token.address);
 }
-var createTokensMap = (tokens) => {
+const createTokensMap = (tokens) => {
   return tokens.reduce(
     (acc, token) => {
       acc[token.address] = token;
@@ -2136,7 +2135,7 @@ var createTokensMap = (tokens) => {
     {}
   );
 };
-var USD_BASED_STABLE_TOKEN_SYMBOLS = ["USDC", "USDC.E", "USDT", "DAI", "USDC.SG"];
+const USD_BASED_STABLE_TOKEN_SYMBOLS = ["USDC", "USDC.E", "USDT", "DAI", "USDC.SG"];
 function isUsdBasedStableToken(token) {
   return USD_BASED_STABLE_TOKEN_SYMBOLS.includes(token.symbol);
 }

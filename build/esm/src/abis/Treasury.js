@@ -1,4 +1,3 @@
-// src/abis/Treasury.ts
 var Treasury_default = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   { inputs: [], name: "addLiquidity", outputs: [], stateMutability: "nonpayable", type: "function" },

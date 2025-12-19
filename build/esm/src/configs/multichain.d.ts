@@ -1,4 +1,4 @@
-import { SettlementChainId, SourceChainId } from "./chains";
+import { SettlementChainId, SourceChainId } from "./chains.js";
 export declare const SETTLEMENT_CHAINS: SettlementChainId[];
 export declare const SOURCE_CHAINS: SourceChainId[];
 export declare function isSettlementChain(chainId: number): chainId is SettlementChainId;

@@ -1,4 +1,3 @@
-// src/domain/externalSwap/types.ts
 var ExternalSwapAggregator = /* @__PURE__ */ ((ExternalSwapAggregator2) => {
   ExternalSwapAggregator2["OpenOcean"] = "openOcean";
   ExternalSwapAggregator2["BotanixStaking"] = "botanixStaking";

@@ -1,4 +1,3 @@
-// src/abis/ReferralStorage.ts
 var ReferralStorage_default = [
   {
     inputs: [

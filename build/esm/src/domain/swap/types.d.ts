@@ -1,5 +1,5 @@
-import { ExternalSwapQuote } from "domain/externalSwap/types";
-import { Token } from "domain/tokens/types";
+import { ExternalSwapQuote } from "../externalSwap/types.js";
+import { Token } from "../tokens/types.js";
 export declare enum SwapPricingType {
     TwoStep = 0,
     Shift = 1,

@@ -1,5 +1,5 @@
-import { OrderType } from "domain/orders/types";
-import { TriggerThresholdType } from "domain/pricing/types";
+import { OrderType } from "../orders/types.js";
+import { TriggerThresholdType } from "../pricing/types.js";
 export declare enum DecreasePositionSwapType {
     NoSwap = 0,
     SwapPnlTokenToCollateralToken = 1,

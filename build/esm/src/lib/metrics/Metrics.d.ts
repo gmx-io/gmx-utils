@@ -1,4 +1,4 @@
-import type { ErrorLike } from "lib/errors";
+import type { ErrorLike } from "../errors/index.js";
 export declare class Metrics {
     private timers;
     startTimer: (label: string) => void;

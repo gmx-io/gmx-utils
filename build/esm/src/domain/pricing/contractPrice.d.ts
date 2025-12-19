@@ -1,6 +1,6 @@
-import { ContractMarketPrices, Market } from "domain/markets/types";
-import { TokensData, TokenPrices } from "domain/tokens/types";
-import { ContractPrice } from "./types";
+import { ContractMarketPrices, Market } from "../markets/types.js";
+import { TokensData, TokenPrices } from "../tokens/types.js";
+import { ContractPrice } from "./types.js";
 export declare function parseContractPrice(price: bigint, tokenDecimals: number): bigint;
 export declare function convertToContractPrice(price: bigint, tokenDecimals: number): ContractPrice;
 export declare function convertToContractTokenPrices(prices: TokenPrices, tokenDecimals: number): {

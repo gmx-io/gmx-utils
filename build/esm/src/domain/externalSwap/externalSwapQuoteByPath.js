@@ -1,8 +1,7 @@
 import { getBotanixStakingExternalSwapQuote } from './botanixStaking.js';
 import { ExternalSwapAggregator } from './types.js';
 
-// src/domain/externalSwap/externalSwapQuoteByPath.ts
-var getExternalSwapQuoteByPath = ({
+const getExternalSwapQuoteByPath = ({
   amountIn,
   externalSwapPath,
   externalSwapQuoteParams

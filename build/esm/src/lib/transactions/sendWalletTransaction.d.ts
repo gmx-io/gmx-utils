@@ -1,7 +1,7 @@
-import { GasPriceData } from "lib/gas/gasPrice";
-import { iRpc } from "lib/rpc/types";
-import { ISigner } from "lib/signing/signing";
-import { TransactionWaiterResult, TxnCallback } from "./types";
+import { GasPriceData } from "../gas/gasPrice.js";
+import { iRpc } from "../rpc/types.js";
+import { ISigner } from "../signing/signing.js";
+import { TransactionWaiterResult, TxnCallback } from "./types.js";
 export type WalletTxnCtx = {};
 export type WalletTxnResult = {
     transactionHash: string;

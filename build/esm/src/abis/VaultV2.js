@@ -1,4 +1,3 @@
-// src/abis/VaultV2.ts
 var VaultV2_default = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {

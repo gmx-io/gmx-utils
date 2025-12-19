@@ -1,4 +1,4 @@
-import type { Token, TokenAddressTypesMap, TokenCategory } from "domain/tokens/types";
+import type { Token, TokenAddressTypesMap, TokenCategory } from "../domain/tokens/types.js";
 export declare const NATIVE_TOKEN_ADDRESS: "0x0000000000000000000000000000000000000000";
 export declare const TOKENS: {
     [chainId: number]: Token[];

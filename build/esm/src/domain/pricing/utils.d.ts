@@ -1,6 +1,6 @@
-import { OrderType } from "domain/orders/types";
-import { TriggerThresholdType } from "domain/pricing/types";
-import { TokenPrices } from "domain/tokens/types";
+import { OrderType } from "../orders/types.js";
+import { TriggerThresholdType } from "../pricing/types.js";
+import { TokenPrices } from "../tokens/types.js";
 export declare function getMarkPrice(p: {
     prices: TokenPrices;
     isIncrease: boolean;

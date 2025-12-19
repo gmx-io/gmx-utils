@@ -1,4 +1,3 @@
-// src/abis/SubaccountApproval.ts
 var SubaccountApproval_default = [
   {
     type: "tuple",
