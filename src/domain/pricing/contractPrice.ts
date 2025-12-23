@@ -50,11 +50,3 @@ export function getContractMarketPrices(
       convertToContractTokenPrices(shortToken.prices, shortToken.decimals),
   };
 }
-
-
-
-
-
-
-
-

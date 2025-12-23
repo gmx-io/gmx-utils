@@ -33,11 +33,3 @@ export type ClaimableCollateralRaw = {
   reductionFactor: string;
   factorByTime: string;
 };
-
-
-
-
-
-
-
-
