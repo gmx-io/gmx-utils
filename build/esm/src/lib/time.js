@@ -1,5 +1,4 @@
-// src/lib/time.ts
-var SECONDS_IN_PERIOD = {
+const SECONDS_IN_PERIOD = {
   "1m": 60,
   "5m": 60 * 5,
   "15m": 60 * 15,
@@ -22,7 +21,7 @@ function periodToSeconds(periodsCount, period) {
 function nowInSeconds() {
   return Math.floor(Date.now() / 1e3);
 }
-var TIMEZONE_OFFSET_SEC = -(/* @__PURE__ */ new Date()).getTimezoneOffset() * 60;
+const TIMEZONE_OFFSET_SEC = -(/* @__PURE__ */ new Date()).getTimezoneOffset() * 60;
 
 export { TIMEZONE_OFFSET_SEC, nowInSeconds, periodToSeconds, secondsFrom, secondsToPeriod };
 //# sourceMappingURL=time.js.map

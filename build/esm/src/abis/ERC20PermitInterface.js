@@ -1,4 +1,3 @@
-// src/abis/ERC20PermitInterface.ts
 var ERC20PermitInterface_default = [
   {
     inputs: [],

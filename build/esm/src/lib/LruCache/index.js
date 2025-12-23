@@ -1,5 +1,4 @@
-// src/lib/LruCache/index.ts
-var LRUCache = class {
+class LRUCache {
   constructor(capacity) {
     this.capacity = capacity;
     this.cache = /* @__PURE__ */ new Map();
@@ -45,7 +44,7 @@ var LRUCache = class {
   clean() {
     this.cache.clear();
   }
-};
+}
 
 export { LRUCache };
 //# sourceMappingURL=index.js.map

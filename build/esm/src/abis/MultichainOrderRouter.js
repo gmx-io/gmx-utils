@@ -1,4 +1,3 @@
-// src/abis/MultichainOrderRouter.ts
 var MultichainOrderRouter_default = [
   {
     inputs: [

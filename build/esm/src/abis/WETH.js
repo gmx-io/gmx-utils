@@ -1,4 +1,3 @@
-// src/abis/WETH.ts
 var WETH_default = [
   {
     inputs: [

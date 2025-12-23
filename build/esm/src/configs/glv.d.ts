@@ -1,5 +1,5 @@
-import type { GlvInfo, GlvOrMarketInfo } from "domain/glv/types";
-import { ContractsChainId, SettlementChainId } from "./chains";
+import type { GlvInfo, GlvOrMarketInfo } from "../domain/glv/types.js";
+import { ContractsChainId, SettlementChainId } from "./chains.js";
 export declare const ENOUGH_DAYS_SINCE_LISTING_FOR_APY = 8;
 export declare const MARKETS_INDEX: Record<number, Record<string, boolean>>;
 export declare function isMarketEnabled(chainId: number, marketAddress: string): boolean;

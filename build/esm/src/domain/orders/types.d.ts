@@ -1,8 +1,8 @@
-import { DecreasePositionSwapType } from "domain/decrease/types";
-import { MarketInfo } from "domain/markets/types";
-import { TriggerThresholdType } from "domain/pricing/types";
-import { SwapPathStats, TokensRatio, TokensRatioAndSlippage } from "domain/swap/types";
-import { TokenData } from "domain/tokens/types";
+import { DecreasePositionSwapType } from "../decrease/types.js";
+import { MarketInfo } from "../markets/types.js";
+import { TriggerThresholdType } from "../pricing/types.js";
+import { SwapPathStats, TokensRatio, TokensRatioAndSlippage } from "../swap/types.js";
+import { TokenData } from "../tokens/types.js";
 export declare enum OrderType {
     MarketSwap = 0,
     LimitSwap = 1,

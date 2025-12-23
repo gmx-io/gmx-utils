@@ -1,8 +1,8 @@
-import { GasLimitsConfig } from "domain/executionFee/types";
-import { MarketsInfoData } from "domain/markets/types";
-import { FindSwapPath } from "domain/swap/types";
-import { TokensData } from "domain/tokens/types";
-export declare const getWrappedAddress: (chainId: number, address: string | undefined) => import("domain/tokens/types").ERC20Address | undefined;
+import { GasLimitsConfig } from "../executionFee/types.js";
+import { MarketsInfoData } from "../markets/types.js";
+import { FindSwapPath } from "../swap/types.js";
+import { TokensData } from "../tokens/types.js";
+export declare const getWrappedAddress: (chainId: number, address: string | undefined) => import("../tokens/types.js").ERC20Address | undefined;
 export declare const createFindSwapPath: (params: {
     chainId: number;
     fromTokenAddress: string | undefined;

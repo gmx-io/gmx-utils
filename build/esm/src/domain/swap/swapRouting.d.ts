@@ -1,8 +1,8 @@
-import { GasLimitsConfig } from "domain/executionFee/types";
-import { MarketsInfoData } from "domain/markets/types";
-import { MarketsGraph } from "domain/swap/buildMarketsAdjacencyGraph";
-import { MarketEdge, MarketEdgeLiquidityGetter, NaiveNetworkEstimator, NaiveSwapEstimator, SwapEstimator, SwapPaths } from "domain/swap/types";
-import { TokensData } from "domain/tokens/types";
+import { GasLimitsConfig } from "../executionFee/types.js";
+import { MarketsInfoData } from "../markets/types.js";
+import { MarketsGraph } from "../swap/buildMarketsAdjacencyGraph.js";
+import { MarketEdge, MarketEdgeLiquidityGetter, NaiveNetworkEstimator, NaiveSwapEstimator, SwapEstimator, SwapPaths } from "../swap/types.js";
+import { TokensData } from "../tokens/types.js";
 export declare const createSwapEstimator: (marketsInfoData: MarketsInfoData, isAtomicSwap: boolean) => SwapEstimator;
 export declare const createMarketEdgeLiquidityGetter: (marketsInfoData: MarketsInfoData) => MarketEdgeLiquidityGetter;
 export declare const createNaiveSwapEstimator: (marketsInfoData: MarketsInfoData, isAtomicSwap: boolean) => NaiveSwapEstimator;

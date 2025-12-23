@@ -1,4 +1,4 @@
-import { ErrorLike } from "lib/errors";
+import { ErrorLike } from "../errors/index.js";
 export type TransactionWaiterResult = {
     relayStatus: {
         taskId: string;

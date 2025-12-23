@@ -1,4 +1,3 @@
-// src/abis/GlvRouter.ts
 var GlvRouter_default = [
   {
     inputs: [

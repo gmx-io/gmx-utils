@@ -1,4 +1,3 @@
-// src/abis/AbstractSubaccountApprovalNonceable.ts
 var AbstractSubaccountApprovalNonceable_default = [
   {
     inputs: [

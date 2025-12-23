@@ -1,4 +1,3 @@
-// src/lib/metrics/emitMetricEvent.ts
 function emitMetricEvent({ event, data, time, isError }) {
 }
 function emitMetricCounter({ event, data }) {

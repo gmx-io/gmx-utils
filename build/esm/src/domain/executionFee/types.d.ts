@@ -1,4 +1,4 @@
-import { Token } from "domain/tokens/types";
+import { Token } from "../tokens/types.js";
 export type ExecutionFee = {
     feeUsd: bigint;
     feeTokenAmount: bigint;

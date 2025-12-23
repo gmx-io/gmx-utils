@@ -1,4 +1,3 @@
-// src/lib/types/guards.ts
 function definedOrThrow(value) {
   if (value === void 0 || value === null) {
     throw new Error("Item is null or undefined");

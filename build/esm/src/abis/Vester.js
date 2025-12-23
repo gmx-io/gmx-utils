@@ -1,4 +1,3 @@
-// src/abis/Vester.ts
 var Vester_default = [
   {
     inputs: [

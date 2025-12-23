@@ -1,8 +1,7 @@
 import { zeroHash, padHex, stringToHex } from 'viem';
 import { hexToBytes, bytesToString } from 'viem/utils';
 
-// src/domain/referrals/referrals.ts
-var MAX_REFERRAL_CODE_LENGTH = 20;
+const MAX_REFERRAL_CODE_LENGTH = 20;
 function decodeReferralCode(hexCode) {
   if (!hexCode || hexCode === zeroHash) {
     return "";

@@ -1,9 +1,9 @@
-import { FeeItem } from "domain/fees/types";
-import { MarketInfo } from "domain/markets/types";
-import { SwapStats } from "domain/swap/types";
-export * from "./estimateOraclePriceCount";
-export * from "./executionFee";
-export * from "domain/pricing/priceImpact";
+import { FeeItem } from "../fees/types.js";
+import { MarketInfo } from "../markets/types.js";
+import { SwapStats } from "../swap/types.js";
+export * from "./estimateOraclePriceCount.js";
+export * from "./executionFee.js";
+export * from "../pricing/priceImpact.js";
 export declare function getSwapFee(marketInfo: MarketInfo, swapAmount: bigint, balanceWasImproved: boolean, isAtomicSwap: boolean): bigint;
 export declare function getPositionFee(marketInfo: MarketInfo, sizeDeltaUsd: bigint, balanceWasImproved: boolean, referralInfo: {
     totalRebateFactor: bigint;

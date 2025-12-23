@@ -4,16 +4,15 @@ import { MARKETS, fixTokenSymbolFromMarketLabel } from './markets.js';
 import { SETTLEMENT_CHAINS } from './multichain.js';
 import { getTokenBySymbol } from './tokens.js';
 
-// src/configs/glv.ts
-var ENOUGH_DAYS_SINCE_LISTING_FOR_APY = 8;
-var MARKETS_INDEX = mapValues(
+const ENOUGH_DAYS_SINCE_LISTING_FOR_APY = 8;
+const MARKETS_INDEX = mapValues(
   MARKETS,
   (markets) => mapValues(markets, (market) => Boolean(market.enabled))
 );
 function isMarketEnabled(chainId, marketAddress) {
   return MARKETS_INDEX[chainId]?.[marketAddress] ?? false;
 }
-var GLV_MARKETS = {
+const GLV_MARKETS = {
   [ARBITRUM]: {
     "0x528A5bac7E746C9A509A1f4F6dF58A03d44279F9": {
       name: void 0,
@@ -117,7 +116,7 @@ function getIsGlv(chainId, address) {
 function getMarketUiConfig(chainId, marketAddress) {
   return MARKETS[chainId]?.[marketAddress];
 }
-var SETTLEMENT_CHAIN_TRADABLE_ASSETS_MAP = {};
+const SETTLEMENT_CHAIN_TRADABLE_ASSETS_MAP = {};
 for (const chainId of SETTLEMENT_CHAINS) {
   const tradableTokenAddressesSet = /* @__PURE__ */ new Set();
   for (const marketAddress in MARKETS[chainId]) {

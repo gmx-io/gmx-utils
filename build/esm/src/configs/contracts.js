@@ -1,8 +1,7 @@
 import { zeroAddress } from 'viem';
 import { ARBITRUM_SEPOLIA, AVALANCHE_FUJI, BOTANIX, AVALANCHE, ARBITRUM } from './chains.js';
 
-// src/configs/contracts.ts
-var CONTRACTS = {
+const CONTRACTS = {
   [ARBITRUM]: {
     // V1
     Vault: "0x489ee077994B6658eAfA855C308275EAd8097C4A",

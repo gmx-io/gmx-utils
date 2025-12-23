@@ -1,4 +1,3 @@
-// src/abis/RewardReader.ts
 var RewardReader_default = [
   {
     inputs: [

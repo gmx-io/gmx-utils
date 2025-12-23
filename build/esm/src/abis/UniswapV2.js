@@ -1,4 +1,3 @@
-// src/abis/UniswapV2.ts
 var UniswapV2_default = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {

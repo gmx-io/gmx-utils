@@ -1,7 +1,7 @@
-import { ExternalSwapQuoteParams } from "domain/externalSwap/types";
-import { MarketsInfoData } from "domain/markets/types";
-import { FindSwapPath, SwapOptimizationOrderArray, SwapRoute, SwapAmounts, TokensRatio } from "domain/swap/types";
-import type { TokenData } from "domain/tokens/types";
+import { ExternalSwapQuoteParams } from "../externalSwap/types.js";
+import { MarketsInfoData } from "../markets/types.js";
+import { FindSwapPath, SwapOptimizationOrderArray, SwapRoute, SwapAmounts, TokensRatio } from "../swap/types.js";
+import type { TokenData } from "../tokens/types.js";
 export declare function getSwapAmountsByFromValue(p: {
     tokenIn: TokenData;
     tokenOut: TokenData;

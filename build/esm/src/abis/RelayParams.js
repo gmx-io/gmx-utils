@@ -1,4 +1,3 @@
-// src/abis/RelayParams.ts
 var RelayParams_default = [
   {
     components: [

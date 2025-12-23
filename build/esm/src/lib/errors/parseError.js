@@ -1,64 +1,10 @@
 import cryptoJs from 'crypto-js';
 import { decodeErrorResult } from 'viem';
-import './ArbitrumNodeInterface.js';
-import './ClaimHandler.js';
-import default4 from './CustomErrors.js';
-import './DataStore.js';
-import './ERC20PermitInterface.js';
-import './ERC721.js';
-import './EventEmitter.js';
-import './ExchangeRouter.js';
-import './GelatoRelayRouter.js';
-import './GlpManager.js';
-import './GlvReader.js';
-import './GlvRouter.js';
-import './GmxMigrator.js';
-import './GovToken.js';
-import './LayerZeroProvider.js';
-import './MintableBaseToken.js';
-import './Multicall.js';
-import './MultichainClaimsRouter.js';
-import './MultichainGlvRouter.js';
-import './MultichainGmRouter.js';
-import './MultichainOrderRouter.js';
-import './MultichainSubaccountRouter.js';
-import './MultichainTransferRouter.js';
-import './MultichainUtils.js';
-import './MultichainVault.js';
-import './Reader.js';
-import './ReaderV2.js';
-import './ReferralStorage.js';
-import './RelayParams.js';
-import './RewardReader.js';
-import './RewardRouter.js';
-import './RewardTracker.js';
-import './SmartAccount.js';
-import './StBTC.js';
-import './SubaccountGelatoRelayRouter.js';
-import './SubaccountRouter.js';
-import './SyntheticsReader.js';
-import './SyntheticsRouter.js';
-import './Timelock.js';
-import './Token.js';
-import './Treasury.js';
-import './UniPool.js';
-import './UniswapV2.js';
-import './UniswapV3Factory.js';
-import './UniswapV3Pool.js';
-import './UniswapV3PositionManager.js';
-import './Vault.js';
-import './VaultReader.js';
-import './VaultV2.js';
-import './VaultV2b.js';
-import './VenusVToken.js';
-import './Vester.js';
-import './WETH.js';
-import './AbstractSubaccountApprovalNonceable.js';
+import { CustomErrors } from '../../abis/index.js';
 import { extractTxnError, getIsUserError, getIsUserRejectedError, extractDataFromError } from './transactionsErrors.js';
 
-// src/lib/errors/parseError.ts
-var URL_REGEXP = /((?:http[s]?:\/\/.)?(?:www\.)?[-a-zA-Z0-9@%._\\+~#=]{2,256}\.[a-z]{2,6}\b(?::\d+)?)(?:[-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/gi;
-var MAX_ERRORS_DEPTH = 1;
+const URL_REGEXP = /((?:http[s]?:\/\/.)?(?:www\.)?[-a-zA-Z0-9@%._\\+~#=]{2,256}\.[a-z]{2,6}\b(?::\d+)?)(?:[-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)/gi;
+const MAX_ERRORS_DEPTH = 1;
 function extendError(error, params) {
   let errorLike;
   if (typeof error === "object" && error !== null) {
@@ -129,7 +75,7 @@ function parseError(error, errorDepth = 0) {
       const errorData = extractDataFromError(errorMessage) ?? extractDataFromError(error?.message);
       if (errorData) {
         const parsedError = decodeErrorResult({
-          abi: default4,
+          abi: CustomErrors,
           data: errorData
         });
         if (parsedError) {
@@ -193,7 +139,7 @@ function hasStack(error) {
 function hasName(error) {
   return !!error && typeof error === "object" && typeof error.name === "string";
 }
-var CustomError = class extends Error {
+class CustomError extends Error {
   constructor({
     name,
     message,
@@ -204,7 +150,7 @@ var CustomError = class extends Error {
     this.name = name;
     this.args = args;
   }
-};
+}
 function isCustomError(error) {
   return error?.isGmxCustomError === true;
 }
@@ -215,7 +161,7 @@ function getCustomError(error) {
   let prettyErrorArgs = void 0;
   try {
     const parsedError = decodeErrorResult({
-      abi: default4,
+      abi: CustomErrors,
       data
     });
     prettyErrorArgs = parsedError.args;

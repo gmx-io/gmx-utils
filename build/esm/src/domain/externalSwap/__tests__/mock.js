@@ -1,18 +1,6 @@
-import 'viem';
-import '../bigmath/index.js';
+import { ExternalSwapAggregator } from '../../externalSwap/types.js';
+import { expandDecimals, USD_DECIMALS } from '../../../lib/numbers/index.js';
 
-// src/lib/numbers/index.ts
-var USD_DECIMALS = 30;
-var PRECISION_DECIMALS = 30;
-expandDecimals(1, PRECISION_DECIMALS);
-BigInt(
-  "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-);
-function expandDecimals(n, decimals) {
-  return BigInt(n) * 10n ** BigInt(decimals);
-}
-
-// src/domain/externalSwap/__tests__/mock.ts
 function mockExternalSwap({
   inToken,
   outToken,
@@ -28,7 +16,7 @@ function mockExternalSwap({
   const usdIn = amountIn * priceIn / expandDecimals(1, inToken.decimals);
   const usdOut = amountOut * priceOut / expandDecimals(1, outToken.decimals);
   return {
-    aggregator: "openOcean" /* OpenOcean */,
+    aggregator: ExternalSwapAggregator.OpenOcean,
     inTokenAddress: inToken.address,
     outTokenAddress: outToken.address,
     receiver,

@@ -1,4 +1,4 @@
-import { Token, TokenData, TokenPrices, TokensData } from "./types";
+import { Token, TokenData, TokenPrices, TokensData } from "./types.js";
 export declare function convertToTokenAmount(usd: bigint | undefined, tokenDecimals: number | undefined, price: bigint | undefined): bigint | undefined;
 export declare function convertToUsd(tokenAmount: bigint | undefined, tokenDecimals: number | undefined, price: bigint | undefined): bigint | undefined;
 export declare function convertBetweenTokens(tokenAmount: bigint | undefined, fromToken: TokenData | undefined, toToken: TokenData | undefined, maximize: boolean): bigint | undefined;

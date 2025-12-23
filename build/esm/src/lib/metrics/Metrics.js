@@ -1,5 +1,4 @@
-// src/lib/metrics/Metrics.ts
-var Metrics = class {
+class Metrics {
   constructor() {
     this.timers = {};
     this.startTimer = (label) => {
@@ -25,8 +24,8 @@ var Metrics = class {
   }
   pushTiming(event, time, data) {
   }
-};
-var metrics = new Metrics();
+}
+const metrics = new Metrics();
 
 export { Metrics, metrics };
 //# sourceMappingURL=Metrics.js.map

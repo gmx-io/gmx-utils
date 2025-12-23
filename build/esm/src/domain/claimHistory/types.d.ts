@@ -1,6 +1,6 @@
-import type { RebateInfoItem } from "domain/fees/rebates/types";
-import type { MarketInfo } from "domain/markets/types";
-import type { Token } from "domain/tokens/types";
+import type { RebateInfoItem } from "../fees/rebates/types.js";
+import type { MarketInfo } from "../markets/types.js";
+import type { Token } from "../tokens/types.js";
 export declare enum ClaimType {
     ClaimPriceImpact = "ClaimPriceImpact",
     ClaimFunding = "ClaimFunding",

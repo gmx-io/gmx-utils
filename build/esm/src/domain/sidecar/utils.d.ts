@@ -1,5 +1,5 @@
-import { PositionOrderInfo } from "domain/orders/types";
-import type { EntryField, InitialEntry, SidecarOrderEntryBase } from "./types";
+import { PositionOrderInfo } from "../orders/types.js";
+import type { EntryField, InitialEntry, SidecarOrderEntryBase } from "./types.js";
 export declare const MAX_PERCENTAGE = 100n;
 export declare const PERCENTAGE_DECIMALS = 0;
 export declare function getDefaultEntryField(decimals: number | undefined, { input, value, error }?: Partial<EntryField>, visualMultiplier?: number): EntryField;

@@ -1,5 +1,5 @@
-import { ExternalSwapQuote } from "domain/externalSwap/types";
-import { Token } from "domain/tokens/types";
+import { ExternalSwapQuote } from "../../externalSwap/types.js";
+import { Token } from "../../tokens/types.js";
 export declare function mockExternalSwap({ inToken, outToken, amountIn, amountOut, priceIn, priceOut, feesUsd, data, to, receiver, }: {
     inToken: Token;
     outToken: Token;

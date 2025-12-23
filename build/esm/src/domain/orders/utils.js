@@ -1,6 +1,5 @@
 import { OrderType } from './types.js';
 
-// src/domain/orders/utils.ts
 function isMarketOrderType(orderType) {
   return [
     OrderType.MarketDecrease,

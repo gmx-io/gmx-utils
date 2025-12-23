@@ -1,11 +1,11 @@
-import { ContractsChainId } from "configs/chains";
-import { DecreasePositionSwapType } from "domain/decrease/types";
-import { ExecutionFee } from "domain/executionFee/types";
-import { ExternalSwapQuote } from "domain/externalSwap/types";
-import { OrderType } from "domain/orders/types";
-import { ContractPrice } from "domain/pricing/types";
-import { ERC20Address, TokensData } from "domain/tokens/types";
-import { TwapOrderParams } from "domain/twap/types";
+import { ContractsChainId } from "../../../configs/chains.js";
+import { DecreasePositionSwapType } from "../../../domain/decrease/types.js";
+import { ExecutionFee } from "../../../domain/executionFee/types.js";
+import { ExternalSwapQuote } from "../../../domain/externalSwap/types.js";
+import { OrderType } from "../../../domain/orders/types.js";
+import { ContractPrice } from "../../../domain/pricing/types.js";
+import { ERC20Address, TokensData } from "../../../domain/tokens/types.js";
+import { TwapOrderParams } from "../../../domain/twap/types.js";
 export type ExchangeRouterCall = {
     method: string;
     params: any[];

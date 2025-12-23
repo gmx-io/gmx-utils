@@ -1,4 +1,3 @@
-// src/abis/SyntheticsRouter.ts
 var SyntheticsRouter_default = [
   {
     inputs: [

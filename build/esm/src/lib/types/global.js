@@ -1,5 +1,4 @@
-// src/lib/types/global.ts
-var mustNeverExist = (x) => {
+const mustNeverExist = (x) => {
   throw new Error(`Must never exist: ${x}`);
 };
 

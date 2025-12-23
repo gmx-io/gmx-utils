@@ -1,7 +1,7 @@
-import { MarketInfo } from "domain/markets/types";
-import { UserReferralInfo } from "domain/referrals/types";
-import { Token, TokenData } from "domain/tokens/types";
-import { PositionInfoLoaded } from "./types";
+import { MarketInfo } from "../markets/types.js";
+import { UserReferralInfo } from "../referrals/types.js";
+import { Token, TokenData } from "../tokens/types.js";
+import { PositionInfoLoaded } from "./types.js";
 export declare function getPositionKey(account: string, marketAddress: string, collateralAddress: string, isLong: boolean): string;
 export declare function parsePositionKey(positionKey: string): {
     account: string;

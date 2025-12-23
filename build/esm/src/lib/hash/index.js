@@ -1,9 +1,8 @@
 import { encodeAbiParameters, keccak256, stringToBytes } from 'viem';
 import { LRUCache } from '../LruCache/index.js';
 
-// src/lib/hash/index.ts
-var ZERO_DATA = "0x";
-var dataCache = new LRUCache(1e4);
+const ZERO_DATA = "0x";
+const dataCache = new LRUCache(1e4);
 function hashData(dataTypes, dataValues) {
   const key = JSON.stringify(
     { dataTypes, dataValues },
@@ -18,7 +17,7 @@ function hashData(dataTypes, dataValues) {
   dataCache.set(key, hash);
   return hash;
 }
-var stringCache = new LRUCache(1e4);
+const stringCache = new LRUCache(1e4);
 function hashString(string) {
   if (stringCache.has(string)) {
     return stringCache.get(string);

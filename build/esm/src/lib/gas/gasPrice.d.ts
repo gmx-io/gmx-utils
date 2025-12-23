@@ -1,4 +1,4 @@
-import { iRpc } from "lib/rpc/types";
+import { iRpc } from "../rpc/types.js";
 export type GasPriceData = {
     gasPrice: bigint;
 } | {

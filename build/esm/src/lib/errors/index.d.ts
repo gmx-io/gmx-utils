@@ -1,2 +1,2 @@
-export * from "./parseError";
-export * from "./transactionsErrors";
+export * from "./parseError.js";
+export * from "./transactionsErrors.js";

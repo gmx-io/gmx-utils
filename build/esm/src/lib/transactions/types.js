@@ -1,4 +1,3 @@
-// src/lib/transactions/types.ts
 var TaskState = /* @__PURE__ */ ((TaskState2) => {
   TaskState2["CheckPending"] = "CheckPending";
   TaskState2["ExecPending"] = "ExecPending";
@@ -16,7 +15,7 @@ var TxnEventName = /* @__PURE__ */ ((TxnEventName2) => {
   TxnEventName2["Error"] = "Error";
   return TxnEventName2;
 })(TxnEventName || {});
-var TxnEventBuilder = class {
+class TxnEventBuilder {
   constructor(ctx) {
     this.ctx = ctx;
   }
@@ -53,7 +52,7 @@ var TxnEventBuilder = class {
   Sent(params) {
     return this._build("Sent" /* Sent */, params);
   }
-};
+}
 
 export { TaskState, TxnEventBuilder, TxnEventName };
 //# sourceMappingURL=types.js.map

@@ -1,9 +1,9 @@
-import { MarketInfo, MarketsInfoData } from "domain/markets/types";
-import { PositionInfo } from "domain/positions/types";
-import { UserReferralInfo } from "domain/referrals/types";
-import { SwapAmounts, FindSwapPath } from "domain/swap/types";
-import { TokenData } from "domain/tokens/types";
-import { ExternalSwapInputs, ExternalSwapQuote } from "./types";
+import { MarketInfo, MarketsInfoData } from "../markets/types.js";
+import { PositionInfo } from "../positions/types.js";
+import { UserReferralInfo } from "../referrals/types.js";
+import { SwapAmounts, FindSwapPath } from "../swap/types.js";
+import { TokenData } from "../tokens/types.js";
+import { ExternalSwapInputs, ExternalSwapQuote } from "./types.js";
 export declare function getExternalSwapInputsByFromValue({ tokenIn, tokenOut, amountIn, findSwapPath, uiFeeFactor, marketsInfoData, chainId, }: {
     tokenIn: TokenData;
     tokenOut: TokenData;

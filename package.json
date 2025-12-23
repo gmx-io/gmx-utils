@@ -35,7 +35,8 @@
     "prebuild": "yarn tsx scripts/prebuild",
     "subsquid-codegen": "./node_modules/@graphql-codegen/cli/cjs/bin.js -c ./scripts/subsquid-codegen.ts",
     "build:types": "tsc -p tsconfig.dts.json",
-    "build": "yarn subsquid-codegen && yarn prebuild && tsup && yarn build:types",
+    "rewrite:paths": "tsc-alias -p tsconfig.json --dir build/esm/src -f -fe .js",
+    "build": "yarn subsquid-codegen && yarn prebuild && tsup && yarn build:types && yarn rewrite:paths",
     "prepare": "husky",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -99,6 +100,7 @@
     "globals": "16.5.0",
     "husky": "9.1.7",
     "jsonc-eslint-parser": "2.4.2",
+    "tsc-alias": "^1.8.16",
     "tsup": "^8.0.0",
     "tsx": "4.19.0",
     "vitest": "3.2.4"

@@ -1,4 +1,3 @@
-// src/domain/pricing/types.ts
 var TriggerThresholdType = /* @__PURE__ */ ((TriggerThresholdType2) => {
   TriggerThresholdType2["Above"] = ">";
   TriggerThresholdType2["Below"] = "<";

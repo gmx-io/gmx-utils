@@ -1,5 +1,5 @@
 import type { Address } from "viem";
-import { iRpc } from "lib/rpc/types";
+import { iRpc } from "../rpc/types.js";
 export declare function estimateGasLimit(rpc: iRpc, txnParams: {
     to: Address;
     data: string;

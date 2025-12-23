@@ -1,5 +1,5 @@
-import { OrderType } from "domain/orders/types";
-import { TwapDuration } from "domain/twap/types";
+import { OrderType } from "../orders/types.js";
+import { TwapDuration } from "../twap/types.js";
 export declare function getIsValidTwapParams(duration: TwapDuration, numberOfParts: number): boolean;
 export declare function getTwapDurationInSeconds(duration: TwapDuration): number;
 export declare function getTwapValidFromTime(duration: TwapDuration, numberOfParts: number, partIndex: number): bigint;

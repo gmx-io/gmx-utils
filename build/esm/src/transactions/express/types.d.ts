@@ -1,10 +1,10 @@
-import type { GasLimitsConfig, L1ExpressOrderGasReference } from "domain/executionFee/types";
-import type { MarketsInfoData } from "domain/markets/types";
-import type { Subaccount, SubaccountValidations } from "domain/subaccount/types";
-import type { FindSwapPath } from "domain/swap/types";
-import type { SignedTokenPermit, TokenData, TokensAllowanceData, TokensData } from "domain/tokens/types";
-import { ExpressTxnData } from "lib/transactions/sendExpressTransaction";
-import type { ExternalCallsPayload } from "../batch/payloads/orderTransactions";
+import type { GasLimitsConfig, L1ExpressOrderGasReference } from "../../domain/executionFee/types.js";
+import type { MarketsInfoData } from "../../domain/markets/types.js";
+import type { Subaccount, SubaccountValidations } from "../../domain/subaccount/types.js";
+import type { FindSwapPath } from "../../domain/swap/types.js";
+import type { SignedTokenPermit, TokenData, TokensAllowanceData, TokensData } from "../../domain/tokens/types.js";
+import { ExpressTxnData } from "../../lib/transactions/sendExpressTransaction.js";
+import type { ExternalCallsPayload } from "../batch/payloads/orderTransactions.js";
 export type GlobalExpressParams = {
     tokensData: TokensData;
     marketsInfoData: MarketsInfoData;

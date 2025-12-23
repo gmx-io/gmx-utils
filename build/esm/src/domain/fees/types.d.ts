@@ -1,4 +1,4 @@
-import type { ExternalSwapAggregator } from "domain/externalSwap/types";
+import type { ExternalSwapAggregator } from "../externalSwap/types.js";
 export type FeeItem = {
     deltaUsd: bigint;
     bps: bigint;

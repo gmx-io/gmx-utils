@@ -1,5 +1,5 @@
-import { TokensData } from "domain/tokens/types";
-import { ExternalSwapQuote } from "./types";
+import { TokensData } from "../tokens/types.js";
+import { ExternalSwapQuote } from "./types.js";
 export declare const getBotanixStakingExternalSwapQuote: ({ tokenInAddress, tokenOutAddress, amountIn, gasPrice, receiverAddress, tokensData, assetsPerShare, }: {
     tokenInAddress: string;
     tokenOutAddress: string;

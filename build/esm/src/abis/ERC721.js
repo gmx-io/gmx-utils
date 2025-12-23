@@ -1,4 +1,3 @@
-// src/abis/ERC721.ts
 var ERC721_default = [
   {
     inputs: [

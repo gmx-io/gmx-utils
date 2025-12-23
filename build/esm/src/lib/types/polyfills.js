@@ -8,7 +8,6 @@ import 'core-js/stable/promise/any';
 import 'core-js/stable/promise/all-settled';
 import 'core-js/stable/promise/with-resolvers';
 
-// src/lib/types/polyfills.ts
 BigInt.prototype.toJSON = function() {
   return this.toString();
 };

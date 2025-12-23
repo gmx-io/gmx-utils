@@ -1,9 +1,8 @@
 import { BOTANIX, ARBITRUM_SEPOLIA, AVALANCHE_FUJI, AVALANCHE, ARBITRUM } from './chains.js';
 import { getTokenBySymbol } from './tokens.js';
 
-// src/configs/markets.ts
-var SWAP_GRAPH_MAX_MARKETS_PER_TOKEN = 5;
-var MARKETS = {
+const SWAP_GRAPH_MAX_MARKETS_PER_TOKEN = 5;
+const MARKETS = {
   [ARBITRUM]: {
     // BTC/USD [WBTC.e-USDC]
     "0x47c031236e19d024b42f8AE6780E44A573170703": {
@@ -1359,7 +1358,7 @@ function getMarketByLabel(chainId, label) {
   }
   return market;
 }
-var fixTokenSymbolFromMarketLabel = (chainId, symbol) => {
+const fixTokenSymbolFromMarketLabel = (chainId, symbol) => {
   if (chainId === ARBITRUM && symbol === "WBTC") {
     return "BTC";
   }

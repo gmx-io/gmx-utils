@@ -1,8 +1,8 @@
-import { ExternalSwapQuoteParams } from "domain/externalSwap/types";
-import { MarketsInfoData } from "domain/markets/types";
-import { SwapStrategyForSwapOrders } from "domain/swap/types";
-import { SwapOptimizationOrderArray } from "domain/swap/types";
-import { TokenData } from "domain/tokens/types";
+import { ExternalSwapQuoteParams } from "../externalSwap/types.js";
+import { MarketsInfoData } from "../markets/types.js";
+import { SwapStrategyForSwapOrders } from "../swap/types.js";
+import { SwapOptimizationOrderArray } from "../swap/types.js";
+import { TokenData } from "../tokens/types.js";
 export declare function buildSwapStrategy({ amountIn, tokenIn, tokenOut, marketsInfoData, chainId, swapOptimizationOrder, externalSwapQuoteParams, }: {
     chainId: number;
     amountIn: bigint;

@@ -1,4 +1,4 @@
-import { ContractsChainId } from "configs/chains";
+import { ContractsChainId } from "../../configs/chains.js";
 export type OpenOceanQuote = {
     to: string;
     data: string;

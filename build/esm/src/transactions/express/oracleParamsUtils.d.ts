@@ -1,11 +1,11 @@
-import type { ContractsChainId } from "configs/chains";
-import { MarketsInfoData } from "domain/markets/types";
-import { ExternalCallsPayload } from "transactions/batch/payloads/orderTransactions";
+import type { ContractsChainId } from "../../configs/chains.js";
+import { MarketsInfoData } from "../../domain/markets/types.js";
+import { ExternalCallsPayload } from "../batch/payloads/orderTransactions.js";
 export declare function getOracleParams({ chainId, tokenAddresses, }: {
     chainId: ContractsChainId;
     tokenAddresses: string[];
 }): {
-    tokens: import("domain/tokens/types").ERC20Address[];
+    tokens: import("../../domain/tokens/types.js").ERC20Address[];
     providers: any[];
     data: any[];
 };
@@ -17,7 +17,7 @@ export declare function getOracleParamsForRelayParams({ chainId, gasPaymentToken
     externalCalls: ExternalCallsPayload | undefined;
     marketsInfoData: MarketsInfoData;
 }): {
-    tokens: import("domain/tokens/types").ERC20Address[];
+    tokens: import("../../domain/tokens/types.js").ERC20Address[];
     providers: any[];
     data: any[];
 };

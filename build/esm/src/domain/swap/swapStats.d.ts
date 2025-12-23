@@ -1,5 +1,5 @@
-import { MarketInfo, MarketsInfoData } from "domain/markets/types";
-import { SwapPathStats, SwapStats } from "domain/swap/types";
+import { MarketInfo, MarketsInfoData } from "../markets/types.js";
+import { SwapPathStats, SwapStats } from "../swap/types.js";
 export declare function getSwapCapacityUsd(marketInfo: MarketInfo, isLong: boolean): bigint;
 export declare function getSwapPathOutputAddresses(p: {
     marketsInfoData: MarketsInfoData;

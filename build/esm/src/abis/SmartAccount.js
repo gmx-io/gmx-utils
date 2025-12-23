@@ -1,4 +1,3 @@
-// src/abis/SmartAccount.ts
 var SmartAccount_default = [
   {
     name: "isValidSignature",

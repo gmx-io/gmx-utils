@@ -1,15 +1,14 @@
 import { AVALANCHE, ARBITRUM, ARBITRUM_SEPOLIA, SOURCE_BSC_MAINNET, SOURCE_BASE_MAINNET, SOURCE_SEPOLIA, SOURCE_OPTIMISM_SEPOLIA } from './chainIds.js';
 
-// src/configs/multichain.ts
 function ensureExhaustive(value) {
   return Object.keys(value).map(Number);
 }
-var SETTLEMENT_CHAINS = ensureExhaustive({
+const SETTLEMENT_CHAINS = ensureExhaustive({
   [ARBITRUM_SEPOLIA]: true,
   [ARBITRUM]: true,
   [AVALANCHE]: true
 });
-var SOURCE_CHAINS = ensureExhaustive({
+const SOURCE_CHAINS = ensureExhaustive({
   [SOURCE_OPTIMISM_SEPOLIA]: true,
   [SOURCE_SEPOLIA]: true,
   [SOURCE_BASE_MAINNET]: true,

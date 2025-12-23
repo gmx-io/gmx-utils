@@ -1,5 +1,5 @@
 import { type Address } from "viem";
-import { ContractsChainId } from "./chains";
+import { ContractsChainId } from "./chains.js";
 export declare const CONTRACTS: {
     42161: {
         Vault: string;
