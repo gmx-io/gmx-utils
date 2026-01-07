@@ -29,6 +29,10 @@
     "./domain/*": {
       "import": "./build/esm/src/domain/*.js",
       "types": "./build/esm/src/domain/*.d.ts"
+    },
+    "./lib/*": {
+      "import": "./build/esm/src/lib/*.js",
+      "types": "./build/esm/src/lib/*.d.ts"
     }
   },
   "scripts": {
